@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Aperçu du langage Python &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Les fondements du language Python" href="principes_fondamentaux.html" />
+    <link rel="prev" title="Préface" href="pr%C3%A9face.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Coding Games With Pygame Zero & Python
+          </a>
+              <div class="version">
+                2.1.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Programmer des jeux vidéos avec Pygame Zero et Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#generer-le-livre">Générer le livre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#troisieme-edition">Troisième édition?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pr%C3%A9face.html">Préface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Table des matières:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Aperçu du langage Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#commentaires">1.1. Commentaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#les-litteraux">1.2. Les littéraux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mots-cles">1.3. Mots-clés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fonctions-natives">1.4. Fonctions natives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bibliotheques">1.5. Bibliothèques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#noms-et-variables">1.6. Noms et variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#l-espace-blanc">1.7. L’espace blanc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="principes_fondamentaux.html">2. Les fondements du language Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphiques.html">4. Afficher des graphiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_games.html">5. Arcade games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">6. Improving your games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chase.html">8. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maze.html">9. Tutorial: Maze game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shooter.html">10. Tutorial: Shooting game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="race.html">11. Tutorial: Race game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">12. Advanced topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minecraft.html">13. Python in Minecraft</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Coding Games With Pygame Zero & Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">1. </span>Aperçu du langage Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapters/vue_ensemble.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="apercu-du-langage-python">
+<h1><span class="section-number">1. </span>Aperçu du langage Python<a class="headerlink" href="#apercu-du-langage-python" title="Permalink to this headline"></a></h1>
+<section id="commentaires">
+<h2><span class="section-number">1.1. </span>Commentaires<a class="headerlink" href="#commentaires" title="Permalink to this headline"></a></h2>
+<p>Un programme informatique est destiné à être compris à la fois par les humains et les ordinateurs. Pour faciliter la tâche des humains, le code peut contenir des commentaires.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Un commentaire ressemble à ceci.</span>
+</pre></div>
+</div>
+<p>Python ignore les commentaires puisqu’ils servent a fournir des explications seulement pour les lecteurs humains et non pour l’ordinateur. Il est utile d’utiliser des commentaires pour se rappeler de ce qu’on a écrit précédement ou pour expliquer à un autre programmeur ce que le code fait ou devrait faire.</p>
+</section>
+<section id="les-litteraux">
+<h2><span class="section-number">1.2. </span>Les littéraux<a class="headerlink" href="#les-litteraux" title="Permalink to this headline"></a></h2>
+<p>Un littéral est un nombre ou du texte dans le code qui représente littéralement le numéro ou le texte écrit par le programmeur. Un programme Python peut contenir n’importe quel nombre et n’importe quelle <em>chaîne</em> de charactères entourée de guillemets anglais (singulier ou double).</p>
+<p>Exemples:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 17%" />
+<col style="width: 39%" />
+<col style="width: 39%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>1.23</p></td>
+<td><p>“Bonjour”</p></td>
+<td><p>‘Antoine’</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mots-cles">
+<h2><span class="section-number">1.3. </span>Mots-clés<a class="headerlink" href="#mots-cles" title="Permalink to this headline"></a></h2>
+<p>Chaque langage informatique a un certain nombre de <em>mots-clés</em> que vous devrez apprendre. Ils ressemblent à des mots anglais et, heureusement, il n’y en a que quelques-uns en Python. Vous pourriez les cocher au fur et à mesure que vous les rencontreriés.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>None</p></td>
+<td><p>True</p></td>
+<td><p>and</p></td>
+<td><p>as</p></td>
+<td><p>assert</p></td>
+<td><p>async</p></td>
+<td><p>await</p></td>
+</tr>
+<tr class="row-even"><td><p>break</p></td>
+<td><p>class</p></td>
+<td><p>continue</p></td>
+<td><p>def</p></td>
+<td><p>del</p></td>
+<td><p>elif</p></td>
+<td><p>else</p></td>
+<td><p>except</p></td>
+</tr>
+<tr class="row-odd"><td><p>finally</p></td>
+<td><p>for</p></td>
+<td><p>from</p></td>
+<td><p>global</p></td>
+<td><p>if</p></td>
+<td><p>import</p></td>
+<td><p>in</p></td>
+<td><p>is</p></td>
+</tr>
+<tr class="row-even"><td><p>lambda</p></td>
+<td><p>nonlocal</p></td>
+<td><p>not</p></td>
+<td><p>or</p></td>
+<td><p>pass</p></td>
+<td><p>raise</p></td>
+<td><p>return</p></td>
+<td><p>try</p></td>
+</tr>
+<tr class="row-odd"><td><p>while</p></td>
+<td><p>with</p></td>
+<td><p>yield</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fonctions-natives">
+<h2><span class="section-number">1.4. </span>Fonctions natives<a class="headerlink" href="#fonctions-natives" title="Permalink to this headline"></a></h2>
+<p>Python est également livré avec un grand nombre de <em>function</em>. Les plus courantes sont intégrés au langage et toujours disponibles (comme les mots-clés). Voici une liste d’entre eux, juste par souci d’exhaustivité. <em>Vous ne les utiliserez probablement jamais tous</em>, et, quand vous en utiliserez un, vous le chercherez probablement dans la documentation du langage. Donc vous n’avez <em>pas besoin de vous en souvenir</em>.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>abs</p></td>
+<td><p>all</p></td>
+<td><p>any</p></td>
+<td><p>ascii</p></td>
+<td><p>bin</p></td>
+<td><p>bool</p></td>
+</tr>
+<tr class="row-even"><td><p>breakpoint</p></td>
+<td><p>bytearray</p></td>
+<td><p>bytes</p></td>
+<td><p>callable</p></td>
+<td><p>chr</p></td>
+<td><p>classmethod</p></td>
+</tr>
+<tr class="row-odd"><td><p>compile</p></td>
+<td><p>complex</p></td>
+<td><p>copyright</p></td>
+<td><p>credits</p></td>
+<td><p>delattr</p></td>
+<td><p>dict</p></td>
+</tr>
+<tr class="row-even"><td><p>dir</p></td>
+<td><p>divmod</p></td>
+<td><p>enumerate</p></td>
+<td><p>eval</p></td>
+<td><p>exec</p></td>
+<td><p>exit</p></td>
+</tr>
+<tr class="row-odd"><td><p>filter</p></td>
+<td><p>float</p></td>
+<td><p>format</p></td>
+<td><p>frozenset</p></td>
+<td><p>getattr</p></td>
+<td><p>globals</p></td>
+</tr>
+<tr class="row-even"><td><p>hasattr</p></td>
+<td><p>hash</p></td>
+<td><p>help</p></td>
+<td><p>hex</p></td>
+<td><p>id</p></td>
+<td><p>input</p></td>
+</tr>
+<tr class="row-odd"><td><p>int</p></td>
+<td><p>isinstance</p></td>
+<td><p>issubclass</p></td>
+<td><p>iter</p></td>
+<td><p>len</p></td>
+<td><p>license</p></td>
+</tr>
+<tr class="row-even"><td><p>list</p></td>
+<td><p>locals</p></td>
+<td><p>map</p></td>
+<td><p>max</p></td>
+<td><p>memoryview</p></td>
+<td><p>min</p></td>
+</tr>
+<tr class="row-odd"><td><p>next</p></td>
+<td><p>object</p></td>
+<td><p>oct</p></td>
+<td><p>open</p></td>
+<td><p>ord</p></td>
+<td><p>pow</p></td>
+</tr>
+<tr class="row-even"><td><p>print</p></td>
+<td><p>property</p></td>
+<td><p>quit</p></td>
+<td><p>range</p></td>
+<td><p>repr</p></td>
+<td><p>reversed</p></td>
+</tr>
+<tr class="row-odd"><td><p>round</p></td>
+<td><p>set</p></td>
+<td><p>setattr</p></td>
+<td><p>slice</p></td>
+<td><p>sorted</p></td>
+<td><p>staticmethod</p></td>
+</tr>
+<tr class="row-even"><td><p>str</p></td>
+<td><p>sum</p></td>
+<td><p>super</p></td>
+<td><p>tuple</p></td>
+<td><p>type</p></td>
+<td><p>vars</p></td>
+</tr>
+<tr class="row-odd"><td><p>zip</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>A la fin de ce livre, vous connaîtrez au moins 20 mots-clés/fonctions, ce qui est suffisant pour créer une grande variété de programmes.</p>
+</section>
+<section id="bibliotheques">
+<h2><span class="section-number">1.5. </span>Bibliothèques<a class="headerlink" href="#bibliotheques" title="Permalink to this headline"></a></h2>
+<p>Il existe de nombreuses autres fonctions (trop nombreuses pour présenter ici), mais tout le monde n’en a pas toujours besoin. Ces fonctions sont donc conservés dans des bibliothèques. Une bibliothèque est un répertoire de fonctions déjà écrites pour nous et qu’on peut ajouter à notre programme. Pour pouvoir utiliser les fonctions d’une bibliothèque, vous devez <em>importer</em> le module de la bibliothèque. Par exemple, si vous souhaitez un nombre aléatoire, il vous suffit d’importez la bibliothèque aléatoire:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Certaines bibliothèques sont fournis avec Python alors que d’autres doivent être téléchargés. C’est le cas des bibliothèques Minecraft, Pygame, Numpy et Richlib.</p>
+</section>
+<section id="noms-et-variables">
+<h2><span class="section-number">1.6. </span>Noms et variables<a class="headerlink" href="#noms-et-variables" title="Permalink to this headline"></a></h2>
+<p>Vous verrez de nombreux mots dans un programme qui ne sont pas des littéraux, des mots-clés ou des fonctions de bibliothèques. Ce sont des noms de variables choisis par le programmeur. Une variable est comme une boite dans laquelle on peut mettre un nombre ou une <em>chaîne</em> de charactères. On déclare et initialise une variable, ce qui revient à dire qu’on informe Python de reconnaitre le nom qu’on veut comme une variable, grâce au symbole <em>=</em>. Par exemple, si le programme doit enregistrer un score et le stocker dans une variable, le programmeur peut choisir de donner le nom <code class="docutils literal notranslate"><span class="pre">score</span></code> à cette variable :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Puis, on peut utiliser cette variable dans une fonction en l’invocant ou l’applant avec son nom. Par exemple, on répète le mot <code class="docutils literal notranslate"><span class="pre">score</span></code> dans la fonction print pour dire à Python d’insérer la valeur de la variable score, ici <em>1</em>, à cet endroit.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score: &quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Python ne comprend pas ce que signifie le nom <code class="docutils literal notranslate"><span class="pre">score</span></code>. Il ne fait que se soucier que le même mot est utilisé à chaque fois pour représenter la valeur de <code class="docutils literal notranslate"><span class="pre">score</span></code>. Donc un programmeur différent pourrait décider d’écrire le programme comme celui-ci:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Un programmeur qui n’aime pas frapper sur un clavier pourrait utiliser un nom plus court et moins descriptif:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score: &quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Cependant, le programmeur doit être cohérent. Ceci <strong>ne fonctionnerait pas</strong> puisqu’on ne dit pas a Python que la variable score existe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score: &quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="l-espace-blanc">
+<h2><span class="section-number">1.7. </span>L’espace blanc<a class="headerlink" href="#l-espace-blanc" title="Permalink to this headline"></a></h2>
+<p>Python est inhabituel en ce qu’il se soucie de <em>l’espace blanc</em>, c’est-à-dire ce que vous obtenez lorsque vous appuyez sur la touche de <em>tabulation</em> ou sur la barre <em>espace</em> sur votre clavier.</p>
+<p>Les programmes Python sont organisés en blocs de lignes. Chaque ligne d’un bloc doit avoir la même quantité d’espace qui l’a précédé - <em>l’indentation</em>.  Voir <a class="reference internal" href="principes_fondamentaux.html#code-blocks"><span class="std std-numref">Program 2.19</span></a> pour un exemple.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pr%C3%A9face.html" class="btn btn-neutral float-left" title="Préface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="principes_fondamentaux.html" class="btn btn-neutral float-right" title="2. Les fondements du language Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Richard Smith.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
