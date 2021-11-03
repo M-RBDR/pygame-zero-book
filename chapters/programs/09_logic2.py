@@ -1,14 +1,14 @@
 if 7 < 9:
-    print("7 is less than 9")
+    print("7 est plus petit que 9")
 
 a = 10
 b = 5
 
 if a == b:
-    print("a is equal to b")
+    print("a est égale à b")
 
 if a < b:
-    print("a is less than b")
+    print("a est petit que b")
 
 if a > b:
-    print("a is greater than b")
+    print("a est plus grand que b")

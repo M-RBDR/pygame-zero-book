@@ -1,31 +1,34 @@
-Coding Games With Pygame Zero & Python
-======================================
+Programmer des jeux vidéos avec Pygame Zero et Python
+=====================================================
 
-Student workbook, 2nd edition, revised
---------------------------------------
+Cahier d'exercices de l'élève, 2e édition, révisée
+--------------------------------------------------
 
-`Read the text
-here <https://electronstudio.github.io/pygame-zero-book/>`__
+`Lire le texte
+ici <https://electronstudio.github.io/pygame-zero-book/>`__
 
-Support the author by buying `the
-book <https://www.amazon.co.uk/dp/1071147706>`__
+Soutenir l'auteur en achetant `le
+livre <https://www.amazon.co.uk/dp/1071147706>`__.
 
-`Black and white
-version <https://www.amazon.co.uk/Coding-Games-Pygame-Zero-Python/dp/1695028805>`__
+La version `noire et blanc
+<https://www.amazon.co.uk/Coding-Games-Pygame-Zero-Python/dp/1695028805>`__.
 
-He also has `a game <http://retrowar.net>`__
+Il a aussi `un jeu <http://retrowar.net>`__.
 
-This book contains all the example programs used in my CoderDojo class
-to teach Python programming. The primary goal of the class is to teach
-programming using action games to make learning more interesting. Some
-of the examples are entirely focused on introducing new language
-concepts or showing how the Pygame Zero API works, but most are a
-mixture of both.
+Ce livre contient tous les exemples de logiciels utilisés dans ma 
+classe CoderDojo pour enseigner le langage de programmation Python. Le 
+but premier de cette classe est d'enseigner
+la programmation en utilisant des jeux vidéos pour rendre 
+l'apprentissage plus intéressant. Certains des exemples de cet ouvrage 
+portent entièrement sur l'introduction de nouveaux concepts du langage 
+Python ou sur l'usage de l'interface de programmation Pygame Zero. 
+Toutefois, la plupart des exemples sont un mélange de ces deux 
+tendances.
 
-Build
-=====
+Générer le livre
+================
 
-Uses https://www.sphinx-doc.org:
+Le livre utilise https://www.sphinx-doc.org:
 
 ::
 
@@ -34,7 +37,7 @@ Uses https://www.sphinx-doc.org:
    cp -a _build/html/. docs/
    make latexpdf
 
-Third edition?
-==============
+Troisième édition?
+==================
 
-Watch https://github.com/electronstudio/python_book
+Regarde https://github.com/electronstudio/python_book

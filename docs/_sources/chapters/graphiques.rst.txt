@@ -6,10 +6,10 @@ Pour créer des graphiques pour nos jeux, nous allons utiliser la bibliothèque 
 
 Le plus petit carré pouvant être afficher sur un moniteur s'appel un *pixel*. Ce diagrame montre une vue rapprochée d'une fenêtre de 40 pixels de large et de 40 pixels de haut. À la taille normale, vous ne verrez pas les lignes de la grille.
 
-.. figure:: images/figures/pixelgrid.pdf
-   :alt: Model View Controller
+.. figure:: images/figures/pixelgrid.png
+   :alt: La disposition des pixels de votre écran
 
-   Model View Controller
+   La disposition des pixels de votre écran
 
 On peut référer à n'importe quel pixel en donant deux coordonés: *(x,y)*. La coordonnée *x* est la position horizontale du pixel et la coordonnée *y* est la position vertical du pixel. Une particularité importante à prendre en compte est que l'origine de notre système de coordonnés se trouve en haut à droite de la fenêtre. Si *x* est positif, notre *pixel* se trouvera un peu plus vers la droite. Si *y* est positif, notre *pixel* se trouvera un peu plus vers le bas. Assure toi de bien comprendre ce que sont des coordonés avant de continuer puisque tout ce qu'on va faire avec Pygame Zero va utiliser des coordonés. (En mathématique, on appel ce système de coordonés le 'système de coordonées cartésiennes').
 
@@ -32,7 +32,8 @@ Si tu utilises un autre éditeur de texte, `des instructions générales se trou
    Complète cette image.
 
 
-.. topic:: Exercise
+.. topic:: Exercice
+   
    Crée ta propre image.
 
 

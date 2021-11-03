@@ -58,7 +58,7 @@ On peut utiliser la fonction ``print()`` afin d'afficher dans la Console les val
    :name: variables
 
    mon_nombre = 7
-   mon_mot = "hello"
+   mon_mot = "allô"
    print(mon_nombre, mon_mot)
 
 On peut utiliser des variables aux mêmes endroits qu'on peut utiliser des littéraux et des chaînes de charactères. Lorsque Python trouve une variable dans ton code, la valeur de la variable sera récupérée de la mémoire de l'ordinateur et susbtitué là où se trouve le nom de la variable. Cette opération est faite pour chacune des expressions où se trouve des variables.
@@ -236,9 +236,9 @@ new boolean values.
    :name: code-logic
    :linenos:
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-Change the values of `a` and `b` in :numref:`code-logic` and see what output is printed by different combinations of `True` and `False`.
+    Change the values of `a` and `b` in :numref:`code-logic` and see what output is printed by different combinations of `True` and `False`.
 
 
 Or

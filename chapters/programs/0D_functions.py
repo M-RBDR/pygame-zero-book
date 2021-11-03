@@ -1,11 +1,11 @@
 
 
-def my_func():
-    print("This is my function")
-    print("Imagine there was lots of code here"
-          " that you didnt want to type 3 times")
+def ma_func():
+    print("Ceci est ma fonction")
+    print("Imaginez qu'il y ait beaucoup de code ici"
+          " que vous ne voulez pas tapper 3 fois.")
 
 
-my_func()
-my_func()
-my_func()
+ma_func()
+ma_func()
+ma_func()

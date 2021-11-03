@@ -1,4 +1,7 @@
-.. _preface:
+.. _préface:
+
+Préface
+=======
 
 .. rubric:: Pour l'enseignant
 

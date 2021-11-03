@@ -3,10 +3,10 @@ import random
 n = random.randint(0, 10)
 
 while True:
-    print("I am thinking of a number, can you guess what it is?")
+    print("Je pense à un nombre, pouvez-vous deviner lequel?")
     g = int(input())
     if g == n:
         break
     else:
-        print("Wrong")
-print("Correct!")
+        print("Faux")
+print("Vous avez trouvé!")

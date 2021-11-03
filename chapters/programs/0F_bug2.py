@@ -1,5 +1,5 @@
 
-def myfunction:
-    print "hello"
+def mafonction:
+    print "Bonjour"
 
-myfunction()
+mafonction()

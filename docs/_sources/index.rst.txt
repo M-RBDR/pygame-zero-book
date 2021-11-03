@@ -1,40 +1,43 @@
-Coding Games With Pygame Zero & Python
-=======================================
+Programmer des jeux vidéos avec Pygame Zero et Python
+=====================================================
 
-Support the author by buying `the
-book <https://www.amazon.co.uk/dp/1071147706>`__.
+Soutenir l'auteur en achetant `le
+livre <https://www.amazon.co.uk/dp/1071147706>`__.
 
-`Black and white
-version <https://www.amazon.co.uk/Coding-Games-Pygame-Zero-Python/dp/1695028805>`__.
+Version `noire et blanc
+<https://www.amazon.co.uk/Coding-Games-Pygame-Zero-Python/dp/1695028805>`__.
 
-He also has `a game <http://retrowar.net>`__.
+Il a aussi `un jeu <http://retrowar.net>`__.
 
-This book contains all the example programs used in my CoderDojo class
-to teach Python programming. The primary goal of the class is to teach
-programming using action games to make learning more interesting. Some
-of the examples are entirely focused on introducing new language
-concepts or showing how the Pygame Zero API works, but most are a
-mixture of both.
+Ce livre contient tous les exemples de logiciels utilisés dans ma 
+classe CoderDojo pour enseigner le langage de programmation Python. Le 
+but premier de cette classe est d'enseigner
+la programmation en utilisant des jeux vidéos pour rendre 
+l'apprentissage plus intéressant. Certains des exemples de cet ouvrage 
+portent entièrement sur l'introduction de nouveaux concepts du langage 
+Python ou sur l'usage de l'interface de programmation Pygame Zero. 
+Toutefois, la plupart des exemples sont un mélange de ces deux 
+tendances.
 
-Watch https://github.com/electronstudio/python_book for news on third edition.
+Regardez https://github.com/electronstudio/python_book pour des mises à jour sur la troisième édition.
 
-:ref:`Preface <preface>`
+:ref:`Préface <préface>`
 
 .. toctree::
    :hidden:
 
    README
-   chapters/preface
+   chapters/préface
 
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents:
+   :caption: Table des matières:
 
-   chapters/overview
-   chapters/fundamentals
+   chapters/vue_ensemble
+   chapters/principes_fondamentaux
    chapters/text_quizes
-   chapters/graphics
+   chapters/graphiques
    chapters/simple_games
    chapters/more_graphics
    chapters/more_games
@@ -44,6 +47,3 @@ Watch https://github.com/electronstudio/python_book for news on third edition.
    chapters/race
    chapters/advanced
    chapters/minecraft
-
-
-

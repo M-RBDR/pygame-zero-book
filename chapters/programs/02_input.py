@@ -1,6 +1,6 @@
 
-print("Enter your name:")
+print("Entrez votre nom:")
 x = input()
-print("Hello", x)
+print("Bonjour", x)
 if x == "richard":
-    print("That is a very cool name")
+    print("C'est un nom pas mal chouette ça!")

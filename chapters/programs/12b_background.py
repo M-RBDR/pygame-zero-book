@@ -1,20 +1,20 @@
 WIDTH = 500
 HEIGHT = 500
 
-alien = Actor('alien')
-alien.x = 0
-alien.y = 50
+extraterrestre = Actor('extraterrestre')
+extraterrestre.x = 0
+extraterrestre.y = 50
 
-background = Actor('background')
+arriere_plan = Actor('arriere_plan')
 
 def draw():
     screen.clear()
-    background.draw()
-    alien.draw()
+    arriere_plan.draw()
+    extraterrestre.draw()
 
 
 def update():
-    alien.x += 2
-    if alien.x > WIDTH:
-        alien.x = 0
+    extraterrestre.x += 2
+    if extraterrestre.x > WIDTH:
+        extraterrestre.x = 0
 

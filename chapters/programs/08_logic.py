@@ -2,10 +2,10 @@ a = True
 b = False
 
 if a:
-    print("a is true")
+    print("a est vrai")
 
 if a and b:
-    print("a and b are both true")
+    print("a et b sont vrais")
 
 if a or b:
-    print("either a or b is true")
+    print("soit a ou b est vrai")

@@ -1,34 +1,34 @@
-# f is an easy way to insert variables into strings
+# f est une façon simple d'insérer des variables dans des chaînes de charactères
 score = 56
-name = "Richard"
-message = f"{name} scored {score} points"
+nom = "Richard"
+message = f"{nom} a eu {score} points"
 print(message)
 
-# += is an easy way to increase the value of a variable
-score = score + 10  # hard way
-score += 10         # easy way
+# += est une façon simple d'augmenter la valeure d'une variable
+score = score + 10  # façon longue
+score += 10         # façon simple
 print(score)
 
-# double / means whole number division, no decimals
+# deux / veut dire une division d'entier (pas de décimales)
 x = 76 // 10
-# MODULO is the percent sign %. It means do division and take the remainder.
-remainder = 76 % 10
-print(f"76 divided by 10 is {x} and the remainder is {remainder}")
+# MODULO est le symbole de pourcentage %. Il signifie faire la division et retourner le reste de la division.
+reste = 76 % 10
+print(f"76 divisé par 10 est {x} et le reste est {reste}")
 
 WIDTH = 500
 a = 502
 b = 502
-# Modulo is often used as a shortcut to reset a number back
-# to zero if it gets too big.  So instead of:
+# Modulo est souvent utilisé pour réinitialiser un nombre à zéro
+# s'il devient trop grand. Alors au lieu de:
 if a > WIDTH:
     a = a - WIDTH
-# You could simply do:
+# Vous pouvez simplement faire:
 b = b % WIDTH
 print(a, b)
 
-# input() takes a string argument which it prints out.
-# Instead of:
-print("Enter a number")
-num = input()
-# You can have a single line:
-num = input("Enter a number")
+# input() prend une chaîne de charactères en argument et l'imprime avant de recevoir de l'information du clavier.
+# Au lieu de:
+print("Entre un nombre")
+nombre = input()
+# Vous pouvez avoir une seule ligne:
+nombre = input("Entre un nombre")

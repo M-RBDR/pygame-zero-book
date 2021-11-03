@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5. Arcade games &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -16,7 +17,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. Improving your games" href="more_graphics.html" />
-    <link rel="prev" title="4. Drawing graphics" href="graphics.html" /> 
+    <link rel="prev" title="4. Afficher des graphiques" href="graphiques.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,16 +39,17 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">Coding Games With Pygame Zero &amp; Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../README.html#build">Build</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../README.html#third-edition">Third edition?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Programmer des jeux vidéos avec Pygame Zero et Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#generer-le-livre">Générer le livre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#troisieme-edition">Troisième édition?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pr%C3%A9face.html">Préface</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p class="caption"><span class="caption-text">Table des matières:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview of Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fundamentals.html">2. Python Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vue_ensemble.html">1. Aperçu du langage Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principes_fondamentaux.html">2. Les fondements du language Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphiques.html">4. Afficher des graphiques</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">5. Arcade games</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#collisions">5.1. Collisions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#chase">5.2. Chase</a></li>
@@ -91,14 +93,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="arcade-games">
+  <section id="arcade-games">
 <h1><span class="section-number">5. </span>Arcade games<a class="headerlink" href="#arcade-games" title="Permalink to this headline"></a></h1>
-<div class="section" id="collisions">
+<section id="collisions">
 <h2><span class="section-number">5.1. </span>Collisions<a class="headerlink" href="#collisions" title="Permalink to this headline"></a></h2>
 <p>Arcade games need to know when one Actor sprite has hit another Actor
 sprite. Most of this code is copied from
-<a class="reference internal" href="graphics.html#code-moving-boxes"><span class="std std-numref">Program 4.2</span></a> and
-<a class="reference internal" href="graphics.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>.</p>
+<a class="reference internal" href="graphiques.html#code-moving-boxes"><span class="std std-numref">Program 4.2</span></a> and
+<a class="reference internal" href="graphiques.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-collisions">
 <div class="code-block-caption"><span class="caption-number">Program 5.1 </span><span class="caption-text">Collisions</span><a class="headerlink" href="#code-collisions" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -151,7 +153,7 @@ sprite. Most of this code is copied from
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>
-<p>Add vertical movement (as you did in Exercise <a class="reference internal" href="graphics.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>).</p>
+<p>Add vertical movement (as you did in Exercise <a class="reference internal" href="graphiques.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>).</p>
 </div>
 <div class="topic">
 <p class="topic-title">Advanced</p>
@@ -161,8 +163,8 @@ sprite. Most of this code is copied from
 <p class="topic-title">Advanced</p>
 <p>Print number of times the box hits the alien (i.e. the score).</p>
 </div>
-</div>
-<div class="section" id="chase">
+</section>
+<section id="chase">
 <h2><span class="section-number">5.2. </span>Chase<a class="headerlink" href="#chase" title="Permalink to this headline"></a></h2>
 <p>Instead of moving constantly to the right we can make the movement
 conditional with an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement so the box chases the alien. Most
@@ -230,8 +232,8 @@ to play again. This may not be what you want in your game!</p>
 <p class="topic-title">Advanced</p>
 <p>Draw a new enemy image.  Save it as <cite>enemy.png</cite> in your <cite>mu_code/images</cite> folder. Load it as an <cite>Actor(‘enemy’)</cite> instead of the <cite>Rect()</cite>.</p>
 </div>
-</div>
-<div class="section" id="powerup">
+</section>
+<section id="powerup">
 <h2><span class="section-number">5.3. </span>Powerup<a class="headerlink" href="#powerup" title="Permalink to this headline"></a></h2>
 <p>Instead of an enemy the box here is a powerup that the player must
 collect. When he does it disappears and moves to a new location.</p>
@@ -301,10 +303,10 @@ collect. When he does it disappears and moves to a new location.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Advanced</p>
-<p>Combine this program with the enemy from  Program <a class="reference internal" href="#code-chase"><span class="std std-numref">Program 5.2</span></a> and the background from <a class="reference internal" href="graphics.html#code-background"><span class="std std-numref">Program 4.4</span></a> and whatever else you want to make your own game.</p>
+<p>Combine this program with the enemy from  Program <a class="reference internal" href="#code-chase"><span class="std std-numref">Program 5.2</span></a> and the background from <a class="reference internal" href="graphiques.html#code-background"><span class="std std-numref">Program 4.4</span></a> and whatever else you want to make your own game.</p>
 </div>
-</div>
-<div class="section" id="sound-and-animation">
+</section>
+<section id="sound-and-animation">
 <h2><span class="section-number">5.4. </span>Sound and animation<a class="headerlink" href="#sound-and-animation" title="Permalink to this headline"></a></h2>
 <p>Pygame Zero comes with one other image <code class="docutils literal notranslate"><span class="pre">alien_hurt.png</span></code> and one sound
 <code class="docutils literal notranslate"><span class="pre">eep.wav</span></code>. If you want more you will have to add them to the
@@ -375,8 +377,8 @@ collect. When he does it disappears and moves to a new location.</p>
 <p class="topic-title">Advanced</p>
 <p>Add a second alien controlled by different keys or gamepad for player 2.</p>
 </div>
-</div>
-<div class="section" id="mouse-clicks">
+</section>
+<section id="mouse-clicks">
 <h2><span class="section-number">5.5. </span>Mouse clicks<a class="headerlink" href="#mouse-clicks" title="Permalink to this headline"></a></h2>
 <p>This uses a <em>function call-back</em> for event-based input. It is similar
 to <a class="reference internal" href="#code-collisions2"><span class="std std-numref">Program 5.4</span></a> but:</p>
@@ -386,7 +388,7 @@ to <a class="reference internal" href="#code-collisions2"><span class="std std-n
 automatically when the player click the mouse.</p></li>
 <li><p>The score is displayed.</p></li>
 </ul>
-<p>See <a class="reference internal" href="fundamentals.html#code-functions"><span class="std std-numref">Program 2.17</span></a> for more about functions.</p>
+<p>See <a class="reference internal" href="principes_fondamentaux.html#code-functions"><span class="std std-numref">Program 2.17</span></a> for more about functions.</p>
 <div class="literal-block-wrapper docutils container" id="code-mouse-input">
 <div class="code-block-caption"><span class="caption-number">Program 5.5 </span><span class="caption-text">Getting input from mouse clicks</span><a class="headerlink" href="#code-mouse-input" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -439,8 +441,8 @@ automatically when the player click the mouse.</p></li>
 </pre></div>
 </td></tr></table></div>
 </div>
-</div>
-<div class="section" id="mouse-movement">
+</section>
+<section id="mouse-movement">
 <h2><span class="section-number">5.6. </span>Mouse movement<a class="headerlink" href="#mouse-movement" title="Permalink to this headline"></a></h2>
 <div class="literal-block-wrapper docutils container" id="code-mouse-movement">
 <div class="code-block-caption"><span class="caption-number">Program 5.6 </span><span class="caption-text">Getting input from mouse movement</span><a class="headerlink" href="#code-mouse-movement" title="Permalink to this code"></a></div>
@@ -483,14 +485,14 @@ automatically when the player click the mouse.</p></li>
 <p class="topic-title">Advanced</p>
 <p>Make a game with one alien controlled by mouse and another controlled by keyboard</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="graphics.html" class="btn btn-neutral float-left" title="4. Drawing graphics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="graphiques.html" class="btn btn-neutral float-left" title="4. Afficher des graphiques" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="more_graphics.html" class="btn btn-neutral float-right" title="6. Improving your games" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

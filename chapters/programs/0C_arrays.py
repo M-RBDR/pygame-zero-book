@@ -1,14 +1,15 @@
-# a is a list of integers
+# a est une liste de nombre entier
 
 a = [74, 53, 21]
 
-# b is a list of strings
+# b est une liste de chaînes de charactères
 
 b = ["hello", "goodbye"]
 
-# You can take a single element from the list.
+# Vous pouvez demander d'avoir un seul élément d'une liste.
 print(a[2])
 
-# You can use a for loop to print every element.
+# Vous pouvez utiliser une boucle afin d'accéder à chaque élément et 
+# l'imprimer.
 for x in a:
     print(x)

@@ -1,5 +1,5 @@
-WIDTH = 500  # What are these units? What if we change them?
-HEIGHT = 500  # What if we delete this line?
+WIDTH = 500   # Que sont ces valeurs? Qu'arrive-t-il si on les changes?
+HEIGHT = 500  # Qu'est-ce qui arrive si on supprime cette ligne?
 
 
 def draw():

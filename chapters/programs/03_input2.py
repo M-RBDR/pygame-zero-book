@@ -1,9 +1,9 @@
-print("Enter your name:")
+print("Entrez votre nom:")
 x = input()
-print("Hello", x)
+print("Bonjour", x)
 if x == "richard":
-    print("That is a very cool name")
-elif x == "nick":
-    print("That is a rubbish name")
+    print("C'est un nom pas mal chouette ça!")
+elif x == "nicola":
+    print("Ça c'est tout un nom!")
 else:
-    print("I do not know your name", x)
+    print("Je ne connais pas ton nom", x)

@@ -1,5 +1,6 @@
 
-print("Hello world")
+print("Bonjour à tous")
 
-# This line is a comment, you dont have to type these!
+# Cette ligne est un commentaire, vous n'avez pas besoin de tapper ces 
+# lignes.
 
