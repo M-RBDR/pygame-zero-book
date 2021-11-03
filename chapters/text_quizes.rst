@@ -1,145 +1,133 @@
-Text-based quiz games
-=====================
+Jeux de devinettes basé sur du texte
+====================================
 
-These programs can be entered using any text editor, but I suggest using
-`the Mu editor <https://codewith.mu/>`__ because it comes with Python,
-Pygame Zero and other libraries all pre-installed in one easy download.
+Ces programmes peuvent être entré en utilisant un éditeur de texte. Je suggère d'utiliser l'éditeur
+`Thonny <https://thonny.org>`__ puisqu'il est livré avec Python, Pygame Zero et d'autres bibliothèques toutes pré-installées dans un seul téléchargment.
 
-Hello, world
-------------
+Bonjour à tous
+-------------
 
-The traditional first program used to make sure Python is working and
-that we can run programs.
+Traditionnellement, le premier programme utilisé pour s'assurer que Python soit bien installé et qu'on soit en mesure d'exécuter d'autres programmes est le programme *"Bonjour à tous"* ("Hello, world" en anglais).
 
-If using the Mu editor:
+Si vous utilisez l'éditeur Thonny:
 
-1. Click the mode button and make sure the mode is set to ``Python3``.
-2. Type in the program.
-3. Click ``Save`` and enter a name for the program.
-4. Click ``Run``.
+1. Assurez-vous que sous ``Exécuter`` le mode Pygame Zero soit décoché.
+2. Tapper le programme.
+3. Cliquez sur ``Enregistrer`` et entrer le nom du programme.
+4. Cliquez sur ``Exécuter le script courant``.
 
 
 
 .. code-block:: python
-   :caption: Hello, world
+   :caption: Bonjour à tous
    :name: code-hello
    :linenos:
 
-   print("Hello world")
+   print("Bonjour à tous")
 
-   # This line is a comment, you dont have to type these!
+   # Cette ligne est un commentaire, vous n'avez pas besoin de tapper celles-ci!
 
 
-Getting input from the keyboard
--------------------------------
+Recevoir des entrés du clavier
+------------------------------
 
-This program will pause and wait for you to enter some text with the
-keyboard, followed by the return key. The text you enter is stored in a
-variable, ``x``.
+Ce programme va faire une pause et attendre pour que vous entrer du texte avec le clavier et que vous tappez sur la touche d'entrée. Le texte que vous entrez est stocké dans une variable nommée ``x``.
 
 .. literalinclude:: programs/02_input.py
-   :caption: Getting input from the keyboard
+   :caption: Recevoir des entrés du clavier
    :name: code-input
    :linenos:
 
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Add some names of your friends and display a different message for each friend.
+   Entrez les noms de vos amis et affichez leur des messages personalisés.
 
 
-Making decisions: if, elif, else
---------------------------------
+Faire des décisions: if, elif, else
+-----------------------------------
 
-This is how to add another name to :numref:`code-input`
+Voici comment on ajoute un autre nom à :numref:`code-input`
 
 .. literalinclude:: programs/03_input2.py
    :emphasize-lines: 6, 7, 8, 9
-   :caption: Decisions: if, elif, else
+   :caption: Décisions: if, elif, else
    :name: code-input2
    :linenos:
 
 
 
-:numref:`code-input2` is very
-similar to :numref:`code-input`. The new lines have
-been highlighted. You can either modify
-:numref:`code-input`, or else create a new file and use
-copy and paste to copy the code from the old program into the new.
+:numref:`code-input2` est très simlaire à :numref:`code-input`. Les nouvelles lignes ont été surlignés. Vous pouvez soit modifier :numref:`code-input`, ou créer un nouveau ficher et utiliser les fonctions copier-coller pour copier le code de l'ancien programme vers le nouveau programme.
 
-A random maths question
------------------------
+Une question de mathématique aléatoire
+--------------------------------------
 
 .. literalinclude:: programs/04_maths_question.py
-   :caption: A random maths question
+   :caption: Une question de mathématique aléatoire
    :name: codemaths
    :linenos:
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Add some more questions, e.g.
+   Ajoute plus de questions. Par exemple:
 
-   * Instead of 7, use another random number.
-   * Use a bigger random number.
-   * Multiply (use `*`), divide (use `/`) or subtract (use `-`) numbers.
-
-
-
-.. topic:: Exercise
-
-   Print how many questions the player got correct at the end.
+   * Au lieu de 7, utilisez un autre nombre aléatoire.
+   * Utilisez un plus grand nombre aléatoire.
+   * Multipliez (utilisez `*`), divisez (utilisez `/`) ou soustrayez (utilisez `-`) les nombres.
 
 
 
+.. topic:: Exercice
 
-Keeping score
--------------
+   Affiche le nombre de questions que le joueur a réussi à la fin du programme.
 
-We create a ``score`` variable to record how many questions the player
-answered correctly.
+
+
+
+Garder un pointage
+------------------
+
+On a créer une variable ``pointage`` afin d'enregistrer le nombre de questions que le joueur a réussi.
 
 
 .. literalinclude:: programs/05_maths_question2.py
-   :caption: Keeping score
+   :caption: Garder un pointage
    :name: code-maths2
    :linenos:
 
 
-Guessing game with a loop
--------------------------
+Jeux de devinettes avec une boucle
+----------------------------------
 
-This ``while`` loop goes round and round forever … or until the player
-gets a correct answer, and then it ``break``s out of the loop. Note
-that everything in the loop is indented.
+Cette boucle ``while`` répète ses instructions pour toujours... ou jusqu'à ce que le joueur réussi à avoir une bonne réponse. Lorsque c'est le cas, la boucle ``break`` et on sort de la boucle. À noter que tous les éléments de la boucle sont en retrait.
 
 
 .. literalinclude:: programs/06_loop.py
-   :caption: Guessing game with a loop
+   :caption: Jeux de devinettes avec une boucle
    :name: codeloop
    :linenos:
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Give a hint to the player when they are wrong.  Was their guess too high or too low?
-
-
-.. topic:: Exercise
-
-   Print how many guesses they took to get it right at the end.
+   Donnez un indice au joueur lorsqu'il n'a pas la bonne réponse. Est-ce que leur réponse était trop grande ou trop petite?
 
 
+.. topic:: Exercice
+
+   Affichez le nombre de tentatives qu'a fait le joueur avant de trouver la bonne réponse.
 
 
-Improved guessing game
-----------------------
 
-:numref:`codeloop` with a hint whether the guess is
-greater or lesser than the answer.
+
+Jeux de devinettes amélioré
+---------------------------
+
+:numref:`codeloop` avec un indice qui révèle si la tentative est trop grande ou trop petite par rapport à la réponse.
 
 .. literalinclude:: programs/07_loop2.py
-   :caption: GImproved guessing game
+   :caption: Jeux de devinettes amélioré
    :name: code-loop2
    :linenos:
 
