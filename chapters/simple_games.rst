@@ -1,12 +1,11 @@
-Arcade games
-============
+Jeux d'arcade
+=============
 
-Collisions
-----------
+Les collisions
+--------------
 
-Arcade games need to know when one Actor sprite has hit another Actor
-sprite. Most of this code is copied from
-:numref:`code-moving_boxes` and
+Dans les jeux d'arcade, il est important de savoir quand un acteur sprite a entré en collision avec un autre acteur sprite. La plupart de ce code est copié de
+:numref:`code-moving_boxes` et de
 :numref:`code-keyboard_input`.
 
 .. literalinclude:: programs/15_collisions.py
@@ -16,49 +15,44 @@ sprite. Most of this code is copied from
 
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Add vertical movement (as you did in Exercise :numref:`code-keyboard_input`).
-
-
-.. topic:: Advanced
-
-   Make the box chase the alien.
+   Ajoutez du mouvement vertical (comme vous avez fait dans l'exercice :numref:`code-keyboard_input`).
 
 
-.. topic:: Advanced
+.. topic:: Pour les plus avancés
 
-    Print number of times the box hits the alien (i.e. the score).
-
-
+   Créez une boite qui pourchasse l'extraterrestre.
 
 
-Chase
------
+.. topic:: Pour les plus avancés
 
-Instead of moving constantly to the right we can make the movement
-conditional with an ``if`` statement so the box chases the alien. Most
-of this code is copied from :numref:`code-collisions`.
-New lines are highlighted. We have also changed what happens when the
-box catches the alien: the program now exits and you must run it again
-to play again. This may not be what you want in your game!
+    Affichez le nombre de fois que la boite entre en collision avec l'extraterrestre (par exemple le pointage).
+
+
+
+
+Pourchasser
+-----------
+
+Au lieu de bouger constament vers la droite, on peut rendre le mouvement conditionnel avec une déclaration ``if``. Ainsi, on peut faire en sorte que la boite pourchasse l'extraterrestre. La plupart du code a été copié de :numref:`code-collisions`. Les lignes qui ont été nouvellement ajoutés sont surlignés. Nous avons aussi modifié ce qui arrive lorsque la boite entre en contacte avec l'extraterrestre: le programme termine et vous devez le relancer pour jouer à nouveau. Ceci n'est peut-être pas ce que vous voulez dans votre jeu, mais nous allons pouvoir modifier le programme plus tard.
 
 .. literalinclude:: programs/15b_chase.py
    :emphasize-lines: 18-23
-   :caption: Alien chase
+   :caption: Pourchasseur d'extraterrestre
    :name: code-chase
    :linenos:
 
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Add vertical movement (as you did in previous exercise).
+   Ajoutez du mouvement vertical (comme vous avez fait dans l'exercice précédent).
 
 
-.. topic:: Advanced
+.. topic:: Pour les plus avancés
 
-   Draw a new enemy image.  Save it as `enemy.png` in your `mu_code/images` folder. Load it as an `Actor('enemy')` instead of the `Rect()`.
+   Créez un nouvel acteur sprite ennemie. Enregistrez son image avec le nom `ennemie.png` dans votre fichier `code/images`. Chargez l'image grâce à `Actor('ennemie')` au lieu de `Rect()`.
 
 
 

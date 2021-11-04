@@ -41,7 +41,7 @@ Regardez https://github.com/electronstudio/python_book pour des mises à jour su
    chapters/simple_games
    chapters/more_graphics
    chapters/more_games
-   chapters/chase
+   chapters/pourchasser
    chapters/maze
    chapters/shooter
    chapters/race
