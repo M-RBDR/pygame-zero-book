@@ -78,28 +78,26 @@ On peut utiliser des variables aux mêmes endroits qu'on peut utiliser des litt�
    Copie :numref:`code-fruits`, mais ajoute 17 bananes au calcul de fruits.
 
 
-We can store a new value in the same variable. The old value will be
-forgotten.
+On peut stocker une nouvelle valeur dans une variable qui a déjà été attitrée une valeur précédement. L'ancienne valeur sera alors oubliée.
 
 .. code-block::
-   :caption: Overwriting a variable with a new value
-   :name: code-overwriting
+   :caption: Attribuer une nouvelle valeur à une variable
+   :name: attribuer_valeur
 
-   apples = 27
-   apples = 40
-   print("Number of apples:", apples)
+   pommes = 27
+   pommes = 40
+   print("Nombre de pommes:", pommes)
 
 
 .. topic:: Question
 
-   What do you think :numref:`code-overwriting` will print?  If you aren't sure, type it in.
+   Que pensez-vous que :numref:`attribuer-valeur` va afficher? Si vous n'êtes pas certain, tapper le programme.
 
-More usefully, we can take the old value, modify it, then store it back
-in the same variable.
+Il est aussi possible de prendre l'ancienne valeur d'une variable, la modifier et stocker cette modification de nouveau dans la variable.
 
 .. code-block::
-   :caption: Modifying a variable
-   :name: mod_variables
+   :caption: Modifier une variable
+   :name: mod_variable
 
    x = 5
    x = x * 10
@@ -107,16 +105,16 @@ in the same variable.
    print(x)
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   What will :numref:`mod_variables` print?  Change the numbers in the program.  Use a division `/` operation.  Then ask your friend to predict what the new program will print.  Was he right?
+   Qu'est-ce que :numref:`mod_variables` va afficher? Changez les numéros dans le programme. Utilisez l'opérateur de division `/`. Puis, demandez à un ami de prédire ce que le nouveau programme va afficher. Est-ce qu'il on eu raison?
 
 
-You will often see this used for counting:
+Vous allez souvent voir ceci lorsqu'un programmeur veut compter:
 
 .. code-block::
-   :caption: Counting
-   :name: counting
+   :caption: Compter
+   :name: compter
 
    total = 0
    total = total + 1
@@ -126,142 +124,123 @@ You will often see this used for counting:
 
 .. topic:: Question
 
-   What is the total count of :numref:`counting` ?
+   Quel est la valeur finale de la variable total dans le programme :numref:`compter`?
 
-See :numref:`code-shortcuts` for a quicker way of
-writing this.
+Voir :numref:`code-shortcuts` pour y trouver une façon plus rapide d'écrire un programme qui a la même fonctionalité.
 
-Input
------
+Les entrés
+----------
 
-:numref:`code-fruits` is not very useful if the number
-of apples changes. This would require the *programmer* to change the
-program. We can improve it by allowing the *user* of the program to
-change the numbers. The ``input()`` function allows the user to type a
-string which can be different every time the program is run.
+:numref:`code-fruits` n'est pas très utile si le nombre de pommes change. Pour prendre en compte un nombre variable de pommes le *programeur* doit adapter son programme. On peut l'améliorer en permettant à *l'usager* du programme de changer les nombres. La fonction ``input()`` permet à l'usager de taper une chaîne de charactères qui pourra par la suite être utiliser dans le programme.
 
 .. code:: python
 
-   my_string = input()
-   print(my_string)
+   mon_texte = input()
+   print(mon_texte)
 
-Sometimes we want the user to type in a number rather than a string. We
-can combine the ``int()`` function with the ``input()`` function to
-convert the string to a number.
+Il arrive que parfois on veut que l'usager puisse entrer un nombre au lieu d'une chaîne de charactères. On peut combiner la fonction ``int()`` avec la fonction ``input()`` pour convertir la chaîne de charactère en nombre entier.
 
 .. code-block::
-   :caption: Getting input from user
-   :name: input3
+   :caption: Recevoir des entrés de l'utilisateur
+   :name: entré3
 
-   print("Enter a number")
-   my_number = int(input())
-   print("Double your number is", my_number * 2)
+   print("Entré un nombre")
+   mon_nombre = int(input())
+   print("Votre nombre doublé est", mon_nombre * 2)
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Copy :numref:`code-fruits` but use `input()` to ask the user to enter the number of apples and pears.
+   Copiez :numref:`code-fruits` mais utilisez `input()` afin de demander à l'usager d'entrer un nombre de pommes et de poires.
 
-Booleans
---------
+Les valeurs booléennes
+----------------------
 
-A *boolean* is another type of variable that is not a string or a
-number. It can have only two possible values: ``True`` or ``False``. In
-some languages and in electronics you may see these represented as ``0``
-and ``1``.
+Une valeur *booléenne* est un autre type de variable qui n'est pas une chaîne de charactère ou un nombre. C'est un type de variable qui peut avoir seulement deux valeurs: vrai (``True``) ou faux (``False``). Dans certains langage de programmation et dans l'électronique, vous pouvez voir ces valeurs représentés par ``0`` et ``1``.
 
-Booleans are used by keywords such as ``if`` and ``while``. In an ``if``
-statement, the indented code block is only run if the boolean is
-``True``.
+Les valeurs booléennes sont utilisés par des mots-clés comme ``if`` et ``while``. Dans une déclaration ``if``, le bloque de code qui est mis en retrait est exécuté seulement si la valeur booléenne est ``True``.
 
 .. code:: python
 
-   sunny = True
+   ensoleillé = True
    if a:
-       print("Let's go to the park")
+       print("Allons au parc")
 
-You could write it like this:
-
-.. code:: python
-
-   sunny = True
-   if sunny==True:
-       print("Let's go to the park")
-
-but that would be redundant because ``if`` always tests if the boolean
-is ``True``.
-
-If the boolean is not true, and if you write an ``else`` clause, the
-indented code block under ``else`` is run instead.
+Vous pouvez l'écrire comme ceci:
 
 .. code:: python
 
-   sunny = False
-   if sunny:
-       print("Let's go to the park")
+   ensoleillé = True
+   if ensoleillé==True:
+       print("Allons au parc")
+
+Cela serait toutefois redondant puisque ``if`` vérifie toujours si la valeur booléenne est ``True``.
+
+Si la valeur booléenne n'est pas vrai, et si vous écrivez une clause ``else``, le bloque en retrait sous le ``else`` sera exécuté.
+
+.. code:: python
+
+   ensoleillé = False
+   if ensoleillé:
+       print("Allons au parc")
    else:
-       print("We must stay at home")
+       print("On doit rester à la maison")
 
-Comparison operators
---------------------
+Les opérateurs de comparaison
+-----------------------------
 
-Comparison operators take two numbers, strings or other variables,
-compare them, and then return a *boolean* ``True`` or ``False`` from
-them.
+Les opérateurs de comparaison prennent deux nombres, deux chaîne de charactères ou d'autres variables afin de les comparer et de retourner une valeur *booléenne* ``True`` ou ``False``.
 
-===================== ======
-Operator              Symbol
-===================== ======
-Equal                 ==
-Not equal             !=
-Less than             <
-Less than or equal    <=
-Greater than          >
-Greater than or equal >=
-===================== ======
+======================== ======
+Operator                 Symbol
+======================== ======
+Égal                     ==
+Pas equal                !=
+Plus petit que           <
+Plus petit que ou égal à <=
+Plus grand que           >
+Plus grand que ou égal à >=
+======================== ======
 
 .. literalinclude:: programs/09_logic2.py
-   :caption: Comparisons: greater than, lesser than, equal to
+   :caption: Comparaison: pus grand que, plus petit que, égal à
    :name: code-logic2
    :linenos:
 
 
-Boolean logic
--------------
+La logique booléenne
+--------------------
 
-The ``and``, ``or`` and ``not`` operators operate on booleans and return
-new boolean values.
+Les opérateurs ``and``, ``or`` et ``not`` opère sur des booléens et retourne des nouvelles valeurs booléennes.
 
 .. literalinclude:: programs/08_logic.py
-   :caption: Boolean operators
+   :caption: Opérateurs booléens
    :name: code-logic
    :linenos:
 
 .. topic:: Exercice
 
-    Change the values of `a` and `b` in :numref:`code-logic` and see what output is printed by different combinations of `True` and `False`.
+    Changez la valeur de `a` et `b` dans :numref:`code-logic` et vérifiez ce qu'affiche les différentes combinaisons de `True` et `False`.
 
 
 Or
 ~~
 
-Only people older than 12 or taller than 150cm are allowed to ride the
-rollercoaster. This program checks whether people are allowed to ride.
+Seulement les personnes qui sont agés de 12 ans et plus ou qui sont plus grande que 150cm peuvent embarquer sur les montagnes russes. Ce programme vérifie si les visiteurs d'un parc d'attraction peuvent aller sur les montagnes russes.
 
 .. code:: python
 
-   print("How old are you?")
+   print("Quel est ton âge?")
    age = int(input())
-   print("How tall are you?")
-   height = int(input())
+   print("Quel est ta grandeur?")
+   grandeur = int(input())
    if age > 12:
-       print("You can ride")
-   elif height > 150:
-       print("You can ride")
+       print("Vous pouvez embarquer sur les montagnes russes")
+   elif grandeur > 150:
+       print("Vous pouvez embarquer sur les montagnes russes")
    else:
-       print("YOU MAY NOT RIDE, GO AWAY!")
+       print("VOUS NE POUVEZ PAS EMBARQUER SUR LES MONTAGNES RUSSES!")
 
-Boolean operators combine two truth values together. The ``or`` operator
-is ``True`` if either of its operands is true. Try this example:
+Les opérateurs booléens combine deux valeurs de vérités ensemble. L'opérateur ``or`` est vrai (``True``) si l'une ou l'autre de ses valeurs est vrai. Essayer cet exemple :
 
 .. code:: python
 
@@ -269,31 +248,30 @@ is ``True`` if either of its operands is true. Try this example:
    b = False
    print(a or b)
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Use the `or` operator to make the rollercoaster program shorter by combining the two tests into one test.
-
-
+   Utilisez l'opérateur `or` afin de rendre le programme de montagnes russes plus court en combinant les deux vérifications ensemble.
 
 
-A possible solution:
+
+
+Une solution possible:
 
 .. code:: python
 
-   print("How old are you?")
+   print("Quel est ton âge?")
    age = int(input())
-   print("How tall are you?")
-   height = int(input())
-   if age > 12 or height > 150:
-       print("You can ride")
+   print("Quel est ta grandeur")
+   grandeur = int(input())
+   if age > 12 or grandeur > 150:
+       print("Vous pouvez embarquer sur les montagnes russes")
    else:
-       print("YOU MAY NOT RIDE, GO AWAY!")
+       print("VOUS NE POUVEZ PAS EMBARQUER SUR LES MONTAGNES RUSSES!")
 
 And
 ~~~
 
-The ``and`` operator is ``True`` if both of its operands is true. Try
-this example:
+L'opérateur ``and`` est vrai (``True``) si ses deux valeurs sont vrai. Essayer cet exemple :
 
 .. code:: python
 
@@ -301,38 +279,34 @@ this example:
    b = False
    print(a and b)
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   The rollercoaster is only allowed to run on days when the temperature is less than 30 degrees.  Extend the program to ask the temperature and use the `and` operator to only allow riding when less than 30 degrees.
-
-
+   Les montagnes russes peuvent seulement fonctionner lors des jours où la température est inférieure à 30 degrés. Modifiez le programme afin de demander la température à l'usager. Utilisez l'opérateur `and` afin de permettre l'accès aux montagnes russes seulement lorsque la température est inférieure à 30 degrés.
 
 
-A possible solution:
+
+
+Une solution possible:
 
 .. code:: python
 
-   print("How old are you?")
+   print("Quel est ton âge")
    age = int(input())
-   print("How tall are you?")
-   height = int(input())
-   print("What is the temperature?")
+   print("Quel est ta grandeur?")
+   grandeur = int(input())
+   print("Quel est la température?")
    temp = int(input())
-   if (age > 12 or height > 150) and temp < 30:
-       print("You can ride")
+   if (age > 12 or grandeur > 150) and temp < 30:
+       print("Vous pouvez embarquer sur les montagnes russes")
    else:
-       print("YOU MAY NOT RIDE, GO AWAY!")
+       print("VOUS NE POUVEZ PAS EMBARQUER SUR LES MONTAGNES RUSSES!")
 
-Note that we have put brackets around the ``or`` expression. This
-ensures it is calculated first and the result of that calculation is
-then used in the ``and`` expression. This is the same way you use the
-BODMAS rule to decide the order of operations in maths.
+À noter que nous devons mettre des parenthèses autour de l'expression ``or``. Ceci fait en sorte que ce qui est dans les parenthèses est calculé en premier et que le résultat soit utilisé dans l'expression ``and``. On utilise les mêmes règles que PEDMAS des mathématiques pour décider l'ordre des opérations.
 
 Not
 ~~~
 
-The ``not`` operator is ``True`` if its operand is ``False``. If its
-operand is ``False`` then it is ``True``. Try this example:
+L'opérateur ``not`` est vrai (``True``) si sa valeur est fausse (``False``). Si son opérateur est faux (``False``), alors son résultat sera vrai (``True``). Essayer cet exemple :
 
 .. code:: python
 
@@ -341,45 +315,45 @@ operand is ``False`` then it is ``True``. Try this example:
    print(not a)
    print(not b)
 
-We can get a user input and convert it to a boolean like this:
+On peut recevoir l'entré de l'usager et le convertir en booléen comme ceci:
 
 .. code:: python
 
-   print("Is it raining? Y/N")
-   if input() == "Y":
-       raining = True
+   print("Est-ce qu'il pleut? O/N")
+   if input() == "O":
+       pleut = True
    else:
-       raining = False
+       pleut = False
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Change the program so that you can only ride the rollercoaster if it is not raining.
-
-
+   Modifiez le programme pour qu'il soit seulement possible d'accéder aux montagnes russes s'il ne pleut pas.
 
 
-Possible solution:
+
+
+Une solution possible:
 
 .. code:: python
 
-   print("Is it raining? Y/N")
-   if input() == "Y":
-       raining = True
+   print("Est-ce qu'il pleut? O/N")
+   if input() == "O":
+       pleut = True
    else:
-       raining = False
-   print("How old are you?")
+       pleut = False
+   print("Quel est ton âge?")
    age = int(input())
-   print("How tall are you?")
-   height = int(input())
-   print("What is the temperature?")
+   print("Quel est ta grandeur?")
+   grandeur = int(input())
+   print("Quel est la température?")
    temp = int(input())
-   if (age > 12 or height > 150) and temp < 30 and not raining:
-       print("You can ride")
+   if (age > 12 or grandeur > 150) and temp < 30 and not pleut:
+       print("Vous pouvez embarquer sur les montagnes russes")
    else:
-       print("YOU MAY NOT RIDE, GO AWAY!")
+       print("VOUS NE POUVEZ PAS EMBARQUER SUR LES MONTAGNES RUSSES!")
 
-For loops
----------
+Les boucles for
+---------------
 
 A ``for`` loop repeats a block of code a number of times. A variable is
 created which we can use to find the current number within the loop.
