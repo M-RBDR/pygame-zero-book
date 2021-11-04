@@ -36,7 +36,7 @@ Regardez https://github.com/electronstudio/python_book pour des mises à jour su
 
    chapters/vue_ensemble
    chapters/principes_fondamentaux
-   chapters/text_quizes
+   chapters/devinettes_texte
    chapters/graphiques
    chapters/simple_games
    chapters/more_graphics
