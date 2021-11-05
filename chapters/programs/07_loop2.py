@@ -10,7 +10,7 @@ while True:
     if g == n:
         break
     elif g < n:
-        print("Trop bas")
+        print("Trop petit")
     elif g > n:
-        print("Trop haut")
+        print("Trop grand")
 print("C'est bien ça! Vous avez pris", tentatives, "tentatives.")
