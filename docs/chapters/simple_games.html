@@ -53,7 +53,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">5. Jeux d’arcade</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#les-collisions">5.1. Les collisions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pourchasser">5.2. Pourchasser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#powerup">5.3. Powerup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#power-up">5.3. Power up</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sound-and-animation">5.4. Sound and animation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mouse-clicks">5.5. Mouse clicks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mouse-movement">5.6. Mouse movement</a></li>
@@ -97,7 +97,7 @@
 <h1><span class="section-number">5. </span>Jeux d’arcade<a class="headerlink" href="#jeux-d-arcade" title="Permalink to this headline"></a></h1>
 <section id="les-collisions">
 <h2><span class="section-number">5.1. </span>Les collisions<a class="headerlink" href="#les-collisions" title="Permalink to this headline"></a></h2>
-<p>Dans les jeux d’arcade, il est important de savoir quand un acteur sprite a entré en collision avec un autre acteur sprite. La plupart de ce code est copié de
+<p>Dans les jeux d’arcade, il est important de savoir quand un acteur sprite est entré en collision avec un autre acteur sprite. La majorité de ce code est copié de
 <a class="reference internal" href="graphiques.html#code-moving-boxes"><span class="std std-numref">Program 4.2</span></a> et de
 <a class="reference internal" href="graphiques.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-collisions">
@@ -165,9 +165,9 @@
 </section>
 <section id="pourchasser">
 <h2><span class="section-number">5.2. </span>Pourchasser<a class="headerlink" href="#pourchasser" title="Permalink to this headline"></a></h2>
-<p>Au lieu de bouger constament vers la droite, on peut rendre le mouvement conditionnel avec une déclaration <code class="docutils literal notranslate"><span class="pre">if</span></code>. Ainsi, on peut faire en sorte que la boite pourchasse l’extraterrestre. La plupart du code a été copié de <a class="reference internal" href="#code-collisions"><span class="std std-numref">Program 5.1</span></a>. Les lignes qui ont été nouvellement ajoutés sont surlignés. Nous avons aussi modifié ce qui arrive lorsque la boite entre en contacte avec l’extraterrestre: le programme termine et vous devez le relancer pour jouer à nouveau. Ceci n’est peut-être pas ce que vous voulez dans votre jeu, mais nous allons pouvoir modifier le programme plus tard.</p>
+<p>Au lieu de bouger constamment vers la droite, on peut rendre le mouvement conditionnel avec une déclaration <code class="docutils literal notranslate"><span class="pre">if</span></code>. Ainsi, on peut faire en sorte que la boite pourchasse l’extraterrestre. La plupart du code a été copié de <a class="reference internal" href="#code-collisions"><span class="std std-numref">Program 5.1</span></a>. Les lignes qui ont été nouvellement ajoutées sont surlignées. Nous avons aussi modifié ce qui arrive lorsque la boite entre en contact avec l’extraterrestre: le programme termine et vous devez le relancer pour jouer à nouveau. Ceci n’est peut-être pas ce que vous voulez dans votre jeu, mais nous allons pouvoir modifier le programme plus tard.</p>
 <div class="literal-block-wrapper docutils container" id="code-chase">
-<div class="code-block-caption"><span class="caption-number">Program 5.2 </span><span class="caption-text">Pourchasseur d’extraterrestre</span><a class="headerlink" href="#code-chase" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 5.2 </span><span class="caption-text">Pourchasseur d’extraterrestres</span><a class="headerlink" href="#code-chase" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -224,11 +224,11 @@
 </div>
 <div class="topic">
 <p class="topic-title">Pour les plus avancés</p>
-<p>Créez un nouvel acteur sprite ennemie. Enregistrez son image avec le nom <cite>ennemie.png</cite> dans votre fichier <cite>code/images</cite>. Chargez l’image grâce à <cite>Actor(‘ennemie’)</cite> au lieu de <cite>Rect()</cite>.</p>
+<p>Créez un nouvel acteur sprite. Enregistrez son image avec le nom <cite>ennemi.png</cite> dans votre fichier <cite>code/images</cite>. Chargez l’image avec <cite>Actor(‘ennemi’)</cite> au lieu de <cite>Rect()</cite>.</p>
 </div>
 </section>
-<section id="powerup">
-<h2><span class="section-number">5.3. </span>Powerup<a class="headerlink" href="#powerup" title="Permalink to this headline"></a></h2>
+<section id="power-up">
+<h2><span class="section-number">5.3. </span>Power up<a class="headerlink" href="#power-up" title="Permalink to this headline"></a></h2>
 <p>Instead of an enemy the box here is a powerup that the player must
 collect. When he does it disappears and moves to a new location.</p>
 <div class="literal-block-wrapper docutils container" id="code-powerup">

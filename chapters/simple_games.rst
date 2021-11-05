@@ -4,7 +4,7 @@ Jeux d'arcade
 Les collisions
 --------------
 
-Dans les jeux d'arcade, il est important de savoir quand un acteur sprite a entré en collision avec un autre acteur sprite. La plupart de ce code est copié de
+Dans les jeux d'arcade, il est important de savoir quand un acteur sprite est entré en collision avec un autre acteur sprite. La majorité de ce code est copié de
 :numref:`code-moving_boxes` et de
 :numref:`code-keyboard_input`.
 
@@ -35,11 +35,11 @@ Dans les jeux d'arcade, il est important de savoir quand un acteur sprite a entr
 Pourchasser
 -----------
 
-Au lieu de bouger constament vers la droite, on peut rendre le mouvement conditionnel avec une déclaration ``if``. Ainsi, on peut faire en sorte que la boite pourchasse l'extraterrestre. La plupart du code a été copié de :numref:`code-collisions`. Les lignes qui ont été nouvellement ajoutés sont surlignés. Nous avons aussi modifié ce qui arrive lorsque la boite entre en contacte avec l'extraterrestre: le programme termine et vous devez le relancer pour jouer à nouveau. Ceci n'est peut-être pas ce que vous voulez dans votre jeu, mais nous allons pouvoir modifier le programme plus tard.
+Au lieu de bouger constamment vers la droite, on peut rendre le mouvement conditionnel avec une déclaration ``if``. Ainsi, on peut faire en sorte que la boite pourchasse l'extraterrestre. La plupart du code a été copié de :numref:`code-collisions`. Les lignes qui ont été nouvellement ajoutées sont surlignées. Nous avons aussi modifié ce qui arrive lorsque la boite entre en contact avec l'extraterrestre: le programme termine et vous devez le relancer pour jouer à nouveau. Ceci n'est peut-être pas ce que vous voulez dans votre jeu, mais nous allons pouvoir modifier le programme plus tard.
 
 .. literalinclude:: programs/15b_chase.py
    :emphasize-lines: 18-23
-   :caption: Pourchasseur d'extraterrestre
+   :caption: Pourchasseur d'extraterrestres
    :name: code-chase
    :linenos:
 
@@ -52,13 +52,13 @@ Au lieu de bouger constament vers la droite, on peut rendre le mouvement conditi
 
 .. topic:: Pour les plus avancés
 
-   Créez un nouvel acteur sprite ennemie. Enregistrez son image avec le nom `ennemie.png` dans votre fichier `code/images`. Chargez l'image grâce à `Actor('ennemie')` au lieu de `Rect()`.
+   Créez un nouvel acteur sprite. Enregistrez son image avec le nom `ennemi.png` dans votre fichier `code/images`. Chargez l'image avec `Actor('ennemi')` au lieu de `Rect()`.
 
 
 
 
-Powerup
--------
+Power up
+--------
 
 Instead of an enemy the box here is a powerup that the player must
 collect. When he does it disappears and moves to a new location.
