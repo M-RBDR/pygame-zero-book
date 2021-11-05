@@ -1,26 +1,26 @@
-Les fondements du language Python
+Les fondements du langage Python
 =================================
 
-Chacun des exercices de ce chapitre vous demandent d'écrire un programme. Les solutions aux exercices se trouvent souvent à la page suivante, mais n'allez pas la voir avant d'avoir essayer de répondre par vous-mêmes. Enregistre chacun des programmes dans son propre fichier.
+Chacun des exercices de ce chapitre vous demande d'écrire un programme. Les solutions aux exercices se trouvent souvent à la page suivante, mais n'allez pas la voir avant d'avoir essayé de répondre par vous-mêmes. Enregistre chacun des programmes dans son propre fichier.
 
 .. sidebar:  Note à l'instructeur
 
    Contrairement au reste de cet ouvrage, les exemples de ce chapitre
-   ne sont pas des jeux. Vous pourriez seulement discutez de certains
-   des exercices au lieu de demander à vos élèves de les faires. De
+   ne sont pas des jeux. Vous pourriez seulement discuter de certains
+   des exercices au lieu de demander à vos élèves de les faire. De
    plus, vous pourriez sauter ce chapitre en entier et laisser sa
    lecture pour les élèves plus motivés qui ont du temps libre à la
    maison. Il est aussi possible d'utiliser ces exercices pour
-   renforcer les concepts vuent dans les exercices de jeux pour les
-   élèves qui nécessitent plus d'examples. Il y a aussi des exercices
-   plus formel dans ce chapitre qui pourraient servir à évaluer les
+   renforcer les concepts vus dans les exercices de jeux pour les
+   élèves qui nécessitent plus d'exemples. Il y a aussi des exercices
+   plus formels dans ce chapitre qui pourraient servir à évaluer les
    élèves dans un contexte académique.
 
 
 Le REPL
 -------
 
-Le REPL signifie *Read Evaluate Print Loop* ou *Lit Évalue Affiche Boucle* en français. Dans l'éditeur Thonny tu peux avoir accès à ce logiciel grâce à l'onglet ``Console`` au bas de la fenêtre. Le REPL est un logiciel dans lequel tu tape des instructions à Python afin que Python exécute immédiatement la commande (pas besoin de cliquer sur ``Exécuter``) pour ensuite afficher le résultat dans la console (pas besoin de taper ``print()``). Il est utile pour faire des calculs rapide et pour essayer des petits segments de code, mais le REPL ne va pas sauvegarder les commandes tapés. Il sert donc seulement pour des programmes très court.
+Le REPL signifie *Read Evaluate Print Loop* ou *Lit Évalue Affiche Boucle* en français. Dans l'éditeur Thonny tu peux avoir accès à ce logiciel grâce à l'onglet ``Console`` au bas de la fenêtre. Le REPL est un logiciel dans lequel tu tapes des instructions à Python afin que Python exécute immédiatement la commande (pas besoin de cliquer sur ``Exécuter``) pour ensuite afficher le résultat dans la console (pas besoin de taper ``print()``). Il est utile pour faire des calculs rapides et pour essayer des petits segments de code, mais le REPL ne va pas sauvegarder les commandes tapées. Il sert donc seulement pour des programmes très courts.
 
 .. figure:: images/figures/repl.png
    :width: 70%
@@ -47,21 +47,21 @@ Il y a aussi des opérateurs plus avancés dans
 Les variables
 -------------
 
-Une *variable* est un endroit dans la mémoire de l'ordinateur où une ou des données sont stockées. Tu peux nommer ta variable pratiquement n'importe quoi, mais tu devrais tout de même faire en sorte que son nom soit représentatif de ce qu'elle contient. Il y a plusieurs *types* de varibles, mais Python gère la majorité de ces types pour nous lorsqu'on stocke des données dans la variable. (Contrairement à plusieurs autres language de programmation, nous n'avons pas besoin de spécifier le type de nos varibles.) Les types de varible les plus courrant sont les nombres entiers (*integer*) et les chaines de charactère (*string*).
+Une *variable* est un endroit dans la mémoire de l'ordinateur où une ou des données sont stockées. Tu peux nommer ta variable pratiquement n'importe quoi, mais tu devrais tout de même faire en sorte que son nom soit représentatif de ce qu'elle contient. Il y a plusieurs *types* de variables, mais Python gère la majorité de ces types pour nous lorsqu'on stocke des données dans la variable. (Contrairement à plusieurs autres langages de programmation, nous n'avons pas besoin de spécifier le type de nos variables.) Les types de variables les plus courants sont les nombres entiers (*integer*) et les chaînes de caractère (*string*).
 
-Nous pouvons créer des variables et leur assigner des valeur en utilisant l'opérateur d'assignation ``=``. Attention, cet opérateur est différent de l'opérateur de comparaisons ``==``.
+Nous pouvons créer des variables et leur assigner des valeurs en utilisant l'opérateur d'assignation ``=``. Attention, cet opérateur est différent de l'opérateur de comparaisons ``==``.
 
-On peut utiliser la fonction ``print()`` afin d'afficher dans la Console les valeurs de nos variables. Cette fonction affiche tout type de données (les nombres, les chaînes de charactères, les littéraux et les variables) en autant que chaque élément ou argument entre parenthèse de la fonction est séparé par une virgule (``,``).
+On peut utiliser la fonction ``print()`` afin d'afficher dans la console les valeurs de nos variables. Cette fonction affiche tout type de données (les nombres, les chaînes de caractères, les littéraux et les variables) pourvu que chaque élément ou argument entre parenthèses de la fonction soit séparé par une virgule (``,``).
 
 .. code-block::
    :caption: Assignation de variables
    :name: variables
 
    mon_nombre = 7
-   mon_mot = "allô"
+   mon_mot = "Bonjour"
    print(mon_nombre, mon_mot)
 
-On peut utiliser des variables aux mêmes endroits qu'on peut utiliser des littéraux et des chaînes de charactères. Lorsque Python trouve une variable dans ton code, la valeur de la variable sera récupérée de la mémoire de l'ordinateur et susbtitué là où se trouve le nom de la variable. Cette opération est faite pour chacune des expressions où se trouve des variables.
+On peut utiliser des variables aux mêmes endroits qu'on peut utiliser des littéraux et des chaînes de caractères. Lorsque Python trouve une variable dans ton code, la valeur de la variable sera récupérée de la mémoire de l'ordinateur et substituée là où se trouve le nom de la variable. Cette opération est faite pour chacune des expressions où se trouvent des variables.
 
 .. code-block::
    :caption: Ajouter deux variables
@@ -78,7 +78,7 @@ On peut utiliser des variables aux mêmes endroits qu'on peut utiliser des litt�
    Copie :numref:`code-fruits`, mais ajoute 17 bananes au calcul de fruits.
 
 
-On peut stocker une nouvelle valeur dans une variable qui a déjà été attitrée une valeur précédement. L'ancienne valeur sera alors oubliée.
+On peut stocker une nouvelle valeur dans une variable dans laquelle on a déjà attribué une valeur. L'ancienne valeur sera alors oubliée.
 
 .. code-block::
    :caption: Attribuer une nouvelle valeur à une variable
@@ -91,7 +91,7 @@ On peut stocker une nouvelle valeur dans une variable qui a déjà été attitr�
 
 .. topic:: Question
 
-   Que pensez-vous que :numref:`attribuer-valeur` va afficher? Si vous n'êtes pas certain, tapper le programme.
+   Que pensez-vous que :numref:`attribuer-valeur` va afficher? Si vous n'êtes pas certain, taper le programme.
 
 Il est aussi possible de prendre l'ancienne valeur d'une variable, la modifier et stocker cette modification de nouveau dans la variable.
 
@@ -107,7 +107,7 @@ Il est aussi possible de prendre l'ancienne valeur d'une variable, la modifier e
 
 .. topic:: Exercice
 
-   Qu'est-ce que :numref:`mod_variables` va afficher? Changez les numéros dans le programme. Utilisez l'opérateur de division `/`. Puis, demandez à un ami de prédire ce que le nouveau programme va afficher. Est-ce qu'il on eu raison?
+   Qu'est-ce que :numref:`mod_variables` va afficher? Changez les numéros dans le programme. Utilisez l'opérateur de division `/`. Puis, demandez à un ami de prédire ce que le nouveau programme va afficher. Est-ce que votre ami a eu raison?
 
 
 Vous allez souvent voir ceci lorsqu'un programmeur veut compter:
@@ -124,40 +124,40 @@ Vous allez souvent voir ceci lorsqu'un programmeur veut compter:
 
 .. topic:: Question
 
-   Quel est la valeur finale de la variable total dans le programme :numref:`compter`?
+   Quelle est la valeur finale de la variable total dans le programme :numref:`compter`?
 
-Voir :numref:`code-shortcuts` pour y trouver une façon plus rapide d'écrire un programme qui a la même fonctionalité.
+Voir :numref:`code-shortcuts` pour y trouver une façon plus rapide d'écrire un programme qui a la même fonctionnalité.
 
 Les entrés
 ----------
 
-:numref:`code-fruits` n'est pas très utile si le nombre de pommes change. Pour prendre en compte un nombre variable de pommes le *programeur* doit adapter son programme. On peut l'améliorer en permettant à *l'usager* du programme de changer les nombres. La fonction ``input()`` permet à l'usager de taper une chaîne de charactères qui pourra par la suite être utiliser dans le programme.
+:numref:`code-fruits` n'est pas très utile si le nombre de pommes change. Pour prendre en compte un nombre variable de pommes, le *programmeur* doit adapter son programme. On peut l'améliorer en permettant à *l'usager* du programme de changer les nombres. La fonction ``input()`` permet à l'usager de taper une chaîne de caractères qui pourra par la suite être utilisée dans le programme.
 
 .. code:: python
 
    mon_texte = input()
    print(mon_texte)
 
-Il arrive que parfois on veut que l'usager puisse entrer un nombre au lieu d'une chaîne de charactères. On peut combiner la fonction ``int()`` avec la fonction ``input()`` pour convertir la chaîne de charactère en nombre entier.
+Il arrive que parfois on veuille que l'usager puisse entrer un nombre au lieu d'une chaîne de caractères. On peut combiner la fonction ``int()`` avec la fonction ``input()`` pour convertir la chaîne de charactère en nombre entier.
 
 .. code-block::
-   :caption: Recevoir des entrés de l'utilisateur
+   :caption: Recevoir des entrées de l'utilisateur
    :name: entré3
 
-   print("Entré un nombre")
+   print("Entrer un nombre")
    mon_nombre = int(input())
    print("Votre nombre doublé est", mon_nombre * 2)
 
 .. topic:: Exercice
 
-   Copiez :numref:`code-fruits` mais utilisez `input()` afin de demander à l'usager d'entrer un nombre de pommes et de poires.
+   Copiez :numref:`code-fruits`, mais utilisez `input()` afin de demander à l'usager d'entrer un nombre de pommes et de poires.
 
 Les valeurs booléennes
 ----------------------
 
-Une valeur *booléenne* est un autre type de variable qui n'est pas une chaîne de charactère ou un nombre. C'est un type de variable qui peut avoir seulement deux valeurs: vrai (``True``) ou faux (``False``). Dans certains langage de programmation et dans l'électronique, vous pouvez voir ces valeurs représentés par ``0`` et ``1``.
+Une valeur *booléenne* est un autre type de variable qui n'est pas une chaîne de caractère ou un nombre. C'est un type de variable qui peut avoir seulement deux valeurs: vrai (``True``) ou faux (``False``). Dans certains langages de programmation et dans l'électronique, vous pouvez voir ces valeurs représentées par ``0`` et ``1``.
 
-Les valeurs booléennes sont utilisés par des mots-clés comme ``if`` et ``while``. Dans une déclaration ``if``, le bloque de code qui est mis en retrait est exécuté seulement si la valeur booléenne est ``True``.
+Les valeurs booléennes sont utilisées par des mots-clés comme ``if`` et ``while``. Dans une déclaration ``if``, le bloc de code qui est mis en retrait est exécuté seulement si la valeur booléenne est ``True``.
 
 .. code:: python
 
@@ -175,7 +175,7 @@ Vous pouvez l'écrire comme ceci:
 
 Cela serait toutefois redondant puisque ``if`` vérifie toujours si la valeur booléenne est ``True``.
 
-Si la valeur booléenne n'est pas vrai, et si vous écrivez une clause ``else``, le bloque en retrait sous le ``else`` sera exécuté.
+Si la valeur booléenne n'est pas vraie, et si vous écrivez une clause ``else``, le bloque en retrait sous le ``else`` sera exécuté.
 
 .. code:: python
 
@@ -188,13 +188,13 @@ Si la valeur booléenne n'est pas vrai, et si vous écrivez une clause ``else``,
 Les opérateurs de comparaison
 -----------------------------
 
-Les opérateurs de comparaison prennent deux nombres, deux chaîne de charactères ou d'autres variables afin de les comparer et de retourner une valeur *booléenne* ``True`` ou ``False``.
+Les opérateurs de comparaison prennent deux nombres, deux chaînes de caractères ou d'autres variables afin de les comparer et de retourner une valeur *booléenne* ``True`` ou ``False``.
 
 ======================== ======
 Operator                 Symbol
 ======================== ======
 Égal                     ==
-Pas equal                !=
+Pas égal                 !=
 Plus petit que           <
 Plus petit que ou égal à <=
 Plus grand que           >
@@ -202,7 +202,7 @@ Plus grand que ou égal à >=
 ======================== ======
 
 .. literalinclude:: programs/09_logic2.py
-   :caption: Comparaison: pus grand que, plus petit que, égal à
+   :caption: Comparaison: plus grand que, plus petit que, égal à
    :name: code-logic2
    :linenos:
 
@@ -219,19 +219,19 @@ Les opérateurs ``and``, ``or`` et ``not`` opère sur des booléens et retourne 
 
 .. topic:: Exercice
 
-    Changez la valeur de `a` et `b` dans :numref:`code-logic` et vérifiez ce qu'affiche les différentes combinaisons de `True` et `False`.
+    Changez la valeur de `a` et `b` dans :numref:`code-logic` et vérifiez ce qu'affichent les différentes combinaisons de `True` et `False`.
 
 
 Or
 ~~
 
-Seulement les personnes qui sont agés de 12 ans et plus ou qui sont plus grande que 150cm peuvent embarquer sur les montagnes russes. Ce programme vérifie si les visiteurs d'un parc d'attraction peuvent aller sur les montagnes russes.
+Seulement les personnes qui sont âgées de 12 ans et plus ou qui sont plus grandes que 150cm peuvent embarquer sur les montagnes russes. Ce programme vérifie si les visiteurs d'un parc d'attractions peuvent aller sur les montagnes russes.
 
 .. code:: python
 
    print("Quel est ton âge?")
    age = int(input())
-   print("Quel est ta grandeur?")
+   print("Quelle est ta grandeur?")
    grandeur = int(input())
    if age > 12:
        print("Vous pouvez embarquer sur les montagnes russes")
@@ -240,7 +240,7 @@ Seulement les personnes qui sont agés de 12 ans et plus ou qui sont plus grande
    else:
        print("VOUS NE POUVEZ PAS EMBARQUER SUR LES MONTAGNES RUSSES!")
 
-Les opérateurs booléens combine deux valeurs de vérités ensemble. L'opérateur ``or`` est vrai (``True``) si l'une ou l'autre de ses valeurs est vrai. Essayer cet exemple :
+Les opérateurs booléens combinent deux valeurs de vérité ensemble. L'opérateur ``or`` est vrai (``True``) si l'une ou l'autre de ses valeurs est vraie. Essayer cet exemple :
 
 .. code:: python
 
@@ -250,7 +250,7 @@ Les opérateurs booléens combine deux valeurs de vérités ensemble. L'opérate
 
 .. topic:: Exercice
 
-   Utilisez l'opérateur `or` afin de rendre le programme de montagnes russes plus court en combinant les deux vérifications ensemble.
+   Utilisez l'opérateur `or` afin de rendre le programme de montagnes russes plus court en combinant les deux vérifications.
 
 
 
@@ -261,7 +261,7 @@ Une solution possible:
 
    print("Quel est ton âge?")
    age = int(input())
-   print("Quel est ta grandeur")
+   print("Quelle est ta grandeur")
    grandeur = int(input())
    if age > 12 or grandeur > 150:
        print("Vous pouvez embarquer sur les montagnes russes")
@@ -271,7 +271,7 @@ Une solution possible:
 And
 ~~~
 
-L'opérateur ``and`` est vrai (``True``) si ses deux valeurs sont vrai. Essayer cet exemple :
+L'opérateur ``and`` est vrai (``True``) si ses deux valeurs sont vraie. Essayer cet exemple :
 
 .. code:: python
 
@@ -292,7 +292,7 @@ Une solution possible:
 
    print("Quel est ton âge")
    age = int(input())
-   print("Quel est ta grandeur?")
+   print("Quelle est ta grandeur?")
    grandeur = int(input())
    print("Quel est la température?")
    temp = int(input())
@@ -315,7 +315,7 @@ L'opérateur ``not`` est vrai (``True``) si sa valeur est fausse (``False``). Si
    print(not a)
    print(not b)
 
-On peut recevoir l'entré de l'usager et le convertir en booléen comme ceci:
+On peut recevoir l'entrée de l'usager et le convertir en booléen comme ceci:
 
 .. code:: python
 
@@ -343,7 +343,7 @@ Une solution possible:
        pleut = False
    print("Quel est ton âge?")
    age = int(input())
-   print("Quel est ta grandeur?")
+   print("Quelle est ta grandeur?")
    grandeur = int(input())
    print("Quel est la température?")
    temp = int(input())
@@ -523,7 +523,7 @@ need for an index or to specify the size of the range:
 
    prices = [3.49, 9.99, 2.50, 20.00]
    total = 0
-   for price in prices:
+pp   for price in prices:
        print("item costs £", price)
        total = total + price
    print("shopping total", total)

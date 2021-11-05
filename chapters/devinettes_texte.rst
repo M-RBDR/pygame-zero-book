@@ -1,11 +1,11 @@
-Jeux de devinettes basé sur du texte
-====================================
+Jeux de devinettes basés sur du texte
+=====================================
 
-Ces programmes peuvent être entré en utilisant un éditeur de texte. Je suggère d'utiliser l'éditeur
-`Thonny <https://thonny.org>`__ puisqu'il est livré avec Python, Pygame Zero et d'autres bibliothèques toutes pré-installées dans un seul téléchargment.
+Ces programmes peuvent être entrés en utilisant un éditeur de texte. Je suggère d'utiliser l'éditeur
+`Thonny <https://thonny.org>`__ puisqu'il est livré avec Python, Pygame Zero et d'autres bibliothèques toutes préinstallées dans un seul téléchargement.
 
 Bonjour à tous
--------------
+--------------
 
 Traditionnellement, le premier programme utilisé pour s'assurer que Python soit bien installé et qu'on soit en mesure d'exécuter d'autres programmes est le programme *"Bonjour à tous"* ("Hello, world" en anglais).
 
@@ -13,7 +13,7 @@ Si vous utilisez l'éditeur Thonny:
 
 1. Assurez-vous que sous ``Exécuter`` le mode Pygame Zero soit décoché.
 2. Tapper le programme.
-3. Cliquez sur ``Enregistrer`` et entrer le nom du programme.
+3. Cliquez sur ``Enregistrer`` et entrez le nom du programme.
 4. Cliquez sur ``Exécuter le script courant``.
 
 
@@ -25,16 +25,16 @@ Si vous utilisez l'éditeur Thonny:
 
    print("Bonjour à tous")
 
-   # Cette ligne est un commentaire, vous n'avez pas besoin de tapper celles-ci!
+   # Cette ligne est un commentaire, vous n'avez pas besoin de taper celles-ci!
 
 
-Recevoir des entrés du clavier
-------------------------------
+Recevoir les entrées du clavier
+-------------------------------
 
-Ce programme va faire une pause et attendre pour que vous entrer du texte avec le clavier et que vous tappez sur la touche d'entrée. Le texte que vous entrez est stocké dans une variable nommée ``x``.
+Ce programme va faire une pause et attendre pour que vous entrer du texte avec le clavier et que vous tapez sur la touche d'entrée. Le texte que vous entrez est stocké dans une variable nommée ``x``.
 
 .. literalinclude:: programs/02_input.py
-   :caption: Recevoir des entrés du clavier
+   :caption: Recevoir les entrées du clavier
    :name: code-input
    :linenos:
 
@@ -42,7 +42,7 @@ Ce programme va faire une pause et attendre pour que vous entrer du texte avec l
 
 .. topic:: Exercice
 
-   Entrez les noms de vos amis et affichez leur des messages personalisés.
+   Entrez les noms de vos amis et affichez des messages qui leur sont personnalisés.
 
 
 Faire des décisions: if, elif, else
@@ -58,7 +58,7 @@ Voici comment on ajoute un autre nom à :numref:`code-input`
 
 
 
-:numref:`code-input2` est très simlaire à :numref:`code-input`. Les nouvelles lignes ont été surlignés. Vous pouvez soit modifier :numref:`code-input`, ou créer un nouveau ficher et utiliser les fonctions copier-coller pour copier le code de l'ancien programme vers le nouveau programme.
+:numref:`code-input2` est très similaire à :numref:`code-input`. Les nouvelles lignes ont été surlignées. Vous pouvez soit modifier :numref:`code-input`, ou créer un nouveau ficher et utiliser les fonctions copier-coller pour copier le code de l'ancien programme vers le nouveau programme.
 
 Une question de mathématique aléatoire
 --------------------------------------
@@ -81,7 +81,7 @@ Une question de mathématique aléatoire
 
 .. topic:: Exercice
 
-   Affiche le nombre de questions que le joueur a réussi à la fin du programme.
+   Affichez le nombre de questions que le joueur a réussi à la fin du programme.
 
 
 
@@ -89,7 +89,7 @@ Une question de mathématique aléatoire
 Garder un pointage
 ------------------
 
-On a créer une variable ``pointage`` afin d'enregistrer le nombre de questions que le joueur a réussi.
+On a créé une variable ``pointage`` afin d'enregistrer le nombre de questions que le joueur a réussi.
 
 
 .. literalinclude:: programs/05_maths_question2.py
@@ -101,7 +101,7 @@ On a créer une variable ``pointage`` afin d'enregistrer le nombre de questions 
 Jeux de devinettes avec une boucle
 ----------------------------------
 
-Cette boucle ``while`` répète ses instructions pour toujours... ou jusqu'à ce que le joueur réussi à avoir une bonne réponse. Lorsque c'est le cas, la boucle ``break`` et on sort de la boucle. À noter que tous les éléments de la boucle sont en retrait.
+Cette boucle ``while`` répète ses instructions pour toujours... ou jusqu'à ce que le joueur réussit à avoir une bonne réponse. Lorsque c'est le cas, la boucle ``break`` et on sort de la boucle. À noter que tous les éléments de la boucle sont en retrait.
 
 
 .. literalinclude:: programs/06_loop.py
@@ -121,13 +121,13 @@ Cette boucle ``while`` répète ses instructions pour toujours... ou jusqu'à ce
 
 
 
-Jeux de devinettes amélioré
----------------------------
+Jeux de devinettes améliorés
+----------------------------
 
 :numref:`codeloop` avec un indice qui révèle si la tentative est trop grande ou trop petite par rapport à la réponse.
 
 .. literalinclude:: programs/07_loop2.py
-   :caption: Jeux de devinettes amélioré
+   :caption: Jeux de devinettes améliorés
    :name: code-loop2
    :linenos:
 
