@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5. Arcade games &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>5. Jeux d’arcade &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -47,12 +47,12 @@
 <p class="caption"><span class="caption-text">Table des matières:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="vue_ensemble.html">1. Aperçu du langage Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="principes_fondamentaux.html">2. Les fondements du language Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principes_fondamentaux.html">2. Les fondements du langage Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devinettes_texte.html">3. Jeux de devinettes basés sur du texte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphiques.html">4. Afficher des graphiques</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Arcade games</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#collisions">5.1. Collisions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#chase">5.2. Chase</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Jeux d’arcade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#les-collisions">5.1. Les collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pourchasser">5.2. Pourchasser</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#powerup">5.3. Powerup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sound-and-animation">5.4. Sound and animation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mouse-clicks">5.5. Mouse clicks</a></li>
@@ -61,7 +61,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="more_graphics.html">6. Improving your games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chase.html">8. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">8. Tutorial: Chase game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="maze.html">9. Tutorial: Maze game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shooter.html">10. Tutorial: Shooting game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="race.html">11. Tutorial: Race game</a></li>
@@ -83,7 +83,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">5. </span>Arcade games</li>
+      <li><span class="section-number">5. </span>Jeux d’arcade</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/simple_games.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,13 +93,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="arcade-games">
-<h1><span class="section-number">5. </span>Arcade games<a class="headerlink" href="#arcade-games" title="Permalink to this headline"></a></h1>
-<section id="collisions">
-<h2><span class="section-number">5.1. </span>Collisions<a class="headerlink" href="#collisions" title="Permalink to this headline"></a></h2>
-<p>Arcade games need to know when one Actor sprite has hit another Actor
-sprite. Most of this code is copied from
-<a class="reference internal" href="graphiques.html#code-moving-boxes"><span class="std std-numref">Program 4.2</span></a> and
+  <section id="jeux-d-arcade">
+<h1><span class="section-number">5. </span>Jeux d’arcade<a class="headerlink" href="#jeux-d-arcade" title="Permalink to this headline"></a></h1>
+<section id="les-collisions">
+<h2><span class="section-number">5.1. </span>Les collisions<a class="headerlink" href="#les-collisions" title="Permalink to this headline"></a></h2>
+<p>Dans les jeux d’arcade, il est important de savoir quand un acteur sprite a entré en collision avec un autre acteur sprite. La plupart de ce code est copié de
+<a class="reference internal" href="graphiques.html#code-moving-boxes"><span class="std std-numref">Program 4.2</span></a> et de
 <a class="reference internal" href="graphiques.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-collisions">
 <div class="code-block-caption"><span class="caption-number">Program 5.1 </span><span class="caption-text">Collisions</span><a class="headerlink" href="#code-collisions" title="Permalink to this code"></a></div>
@@ -152,28 +151,23 @@ sprite. Most of this code is copied from
 </td></tr></table></div>
 </div>
 <div class="topic">
-<p class="topic-title">Exercise</p>
-<p>Add vertical movement (as you did in Exercise <a class="reference internal" href="graphiques.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>).</p>
+<p class="topic-title">Exercice</p>
+<p>Ajoutez du mouvement vertical (comme vous avez fait dans l’exercice <a class="reference internal" href="graphiques.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>).</p>
 </div>
 <div class="topic">
-<p class="topic-title">Advanced</p>
-<p>Make the box chase the alien.</p>
+<p class="topic-title">Pour les plus avancés</p>
+<p>Créez une boite qui pourchasse l’extraterrestre.</p>
 </div>
 <div class="topic">
-<p class="topic-title">Advanced</p>
-<p>Print number of times the box hits the alien (i.e. the score).</p>
+<p class="topic-title">Pour les plus avancés</p>
+<p>Affichez le nombre de fois que la boite entre en collision avec l’extraterrestre (par exemple le pointage).</p>
 </div>
 </section>
-<section id="chase">
-<h2><span class="section-number">5.2. </span>Chase<a class="headerlink" href="#chase" title="Permalink to this headline"></a></h2>
-<p>Instead of moving constantly to the right we can make the movement
-conditional with an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement so the box chases the alien. Most
-of this code is copied from <a class="reference internal" href="#code-collisions"><span class="std std-numref">Program 5.1</span></a>.
-New lines are highlighted. We have also changed what happens when the
-box catches the alien: the program now exits and you must run it again
-to play again. This may not be what you want in your game!</p>
+<section id="pourchasser">
+<h2><span class="section-number">5.2. </span>Pourchasser<a class="headerlink" href="#pourchasser" title="Permalink to this headline"></a></h2>
+<p>Au lieu de bouger constament vers la droite, on peut rendre le mouvement conditionnel avec une déclaration <code class="docutils literal notranslate"><span class="pre">if</span></code>. Ainsi, on peut faire en sorte que la boite pourchasse l’extraterrestre. La plupart du code a été copié de <a class="reference internal" href="#code-collisions"><span class="std std-numref">Program 5.1</span></a>. Les lignes qui ont été nouvellement ajoutés sont surlignés. Nous avons aussi modifié ce qui arrive lorsque la boite entre en contacte avec l’extraterrestre: le programme termine et vous devez le relancer pour jouer à nouveau. Ceci n’est peut-être pas ce que vous voulez dans votre jeu, mais nous allons pouvoir modifier le programme plus tard.</p>
 <div class="literal-block-wrapper docutils container" id="code-chase">
-<div class="code-block-caption"><span class="caption-number">Program 5.2 </span><span class="caption-text">Alien chase</span><a class="headerlink" href="#code-chase" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 5.2 </span><span class="caption-text">Pourchasseur d’extraterrestre</span><a class="headerlink" href="#code-chase" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -225,12 +219,12 @@ to play again. This may not be what you want in your game!</p>
 </td></tr></table></div>
 </div>
 <div class="topic">
-<p class="topic-title">Exercise</p>
-<p>Add vertical movement (as you did in previous exercise).</p>
+<p class="topic-title">Exercice</p>
+<p>Ajoutez du mouvement vertical (comme vous avez fait dans l’exercice précédent).</p>
 </div>
 <div class="topic">
-<p class="topic-title">Advanced</p>
-<p>Draw a new enemy image.  Save it as <cite>enemy.png</cite> in your <cite>mu_code/images</cite> folder. Load it as an <cite>Actor(‘enemy’)</cite> instead of the <cite>Rect()</cite>.</p>
+<p class="topic-title">Pour les plus avancés</p>
+<p>Créez un nouvel acteur sprite ennemie. Enregistrez son image avec le nom <cite>ennemie.png</cite> dans votre fichier <cite>code/images</cite>. Chargez l’image grâce à <cite>Actor(‘ennemie’)</cite> au lieu de <cite>Rect()</cite>.</p>
 </div>
 </section>
 <section id="powerup">

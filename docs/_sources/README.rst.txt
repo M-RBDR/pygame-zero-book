@@ -5,7 +5,7 @@ Cahier d'exercices de l'élève, 2e édition, révisée
 --------------------------------------------------
 
 `Lire le texte
-ici <https://electronstudio.github.io/pygame-zero-book/>`__
+ici <https://m-rbdr.github.io/pygame-zero-book/>`__
 
 Soutenir l'auteur en achetant `le
 livre <https://www.amazon.co.uk/dp/1071147706>`__.

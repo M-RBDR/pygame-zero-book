@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Jeux de devinettes basés sur du texte &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Afficher des graphiques" href="graphiques.html" />
+    <link rel="prev" title="2. Les fondements du langage Python" href="principes_fondamentaux.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Coding Games With Pygame Zero & Python
+          </a>
+              <div class="version">
+                2.1.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Programmer des jeux vidéos avec Pygame Zero et Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#generer-le-livre">Générer le livre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#troisieme-edition">Troisième édition?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pr%C3%A9face.html">Préface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Table des matières:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="vue_ensemble.html">1. Aperçu du langage Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principes_fondamentaux.html">2. Les fondements du langage Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Jeux de devinettes basés sur du texte</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bonjour-a-tous">3.1. Bonjour à tous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recevoir-les-entrees-du-clavier">3.2. Recevoir les entrées du clavier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faire-des-decisions-if-elif-else">3.3. Faire des décisions: if, elif, else</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#une-question-de-mathematique-aleatoire">3.4. Une question de mathématique aléatoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#garder-un-pointage">3.5. Garder un pointage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jeux-de-devinettes-avec-une-boucle">3.6. Jeux de devinettes avec une boucle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jeux-de-devinettes-ameliores">3.7. Jeux de devinettes améliorés</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="graphiques.html">4. Afficher des graphiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_games.html">5. Jeux d’arcade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">6. Improving your games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">8. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maze.html">9. Tutorial: Maze game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shooter.html">10. Tutorial: Shooting game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="race.html">11. Tutorial: Race game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">12. Advanced topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minecraft.html">13. Python in Minecraft</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Coding Games With Pygame Zero & Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">3. </span>Jeux de devinettes basés sur du texte</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapters/devinettes_texte.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jeux-de-devinettes-bases-sur-du-texte">
+<h1><span class="section-number">3. </span>Jeux de devinettes basés sur du texte<a class="headerlink" href="#jeux-de-devinettes-bases-sur-du-texte" title="Permalink to this headline"></a></h1>
+<p>Ces programmes peuvent être entrés en utilisant un éditeur de texte. Je suggère d’utiliser l’éditeur
+<a class="reference external" href="https://thonny.org">Thonny</a> puisqu’il est livré avec Python, Pygame Zero et d’autres bibliothèques toutes préinstallées dans un seul téléchargement.</p>
+<section id="bonjour-a-tous">
+<h2><span class="section-number">3.1. </span>Bonjour à tous<a class="headerlink" href="#bonjour-a-tous" title="Permalink to this headline"></a></h2>
+<p>Traditionnellement, le premier programme utilisé pour s’assurer que Python soit bien installé et qu’on soit en mesure d’exécuter d’autres programmes est le programme <em>“Bonjour à tous”</em> (“Hello, world” en anglais).</p>
+<p>Si vous utilisez l’éditeur Thonny:</p>
+<ol class="arabic simple">
+<li><p>Assurez-vous que sous <code class="docutils literal notranslate"><span class="pre">Exécuter</span></code> le mode Pygame Zero soit décoché.</p></li>
+<li><p>Tapper le programme.</p></li>
+<li><p>Cliquez sur <code class="docutils literal notranslate"><span class="pre">Enregistrer</span></code> et entrez le nom du programme.</p></li>
+<li><p>Cliquez sur <code class="docutils literal notranslate"><span class="pre">Exécuter</span> <span class="pre">le</span> <span class="pre">script</span> <span class="pre">courant</span></code>.</p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="code-hello">
+<div class="code-block-caption"><span class="caption-number">Program 3.1 </span><span class="caption-text">Bonjour à tous</span><a class="headerlink" href="#code-hello" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour à tous&quot;</span><span class="p">)</span>
+
+<span class="c1"># Cette ligne est un commentaire, vous n&#39;avez pas besoin de taper celles-ci!</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</section>
+<section id="recevoir-les-entrees-du-clavier">
+<h2><span class="section-number">3.2. </span>Recevoir les entrées du clavier<a class="headerlink" href="#recevoir-les-entrees-du-clavier" title="Permalink to this headline"></a></h2>
+<p>Ce programme va faire une pause et attendre pour que vous entrer du texte avec le clavier et que vous tapez sur la touche d’entrée. Le texte que vous entrez est stocké dans une variable nommée <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="code-input">
+<div class="code-block-caption"><span class="caption-number">Program 3.2 </span><span class="caption-text">Recevoir les entrées du clavier</span><a class="headerlink" href="#code-input" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entrez votre nom:&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;richard&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&#39;est un nom pas mal chouette ça!&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="topic">
+<p class="topic-title">Exercice</p>
+<p>Entrez les noms de vos amis et affichez des messages qui leur sont personnalisés.</p>
+</div>
+</section>
+<section id="faire-des-decisions-if-elif-else">
+<h2><span class="section-number">3.3. </span>Faire des décisions: if, elif, else<a class="headerlink" href="#faire-des-decisions-if-elif-else" title="Permalink to this headline"></a></h2>
+<p>Voici comment on ajoute un autre nom à <a class="reference internal" href="#code-input"><span class="std std-numref">Program 3.2</span></a></p>
+<div class="literal-block-wrapper docutils container" id="code-input2">
+<div class="code-block-caption"><span class="caption-number">Program 3.3 </span><span class="caption-text">Décisions: if, elif, else</span><a class="headerlink" href="#code-input2" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entrez votre nom:&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;richard&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&#39;est un nom pas mal chouette ça!&quot;</span><span class="p">)</span>
+<span class="hll"><span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;nicola&quot;</span><span class="p">:</span>
+</span><span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ça c&#39;est tout un nom!&quot;</span><span class="p">)</span>
+</span><span class="hll"><span class="k">else</span><span class="p">:</span>
+</span><span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je ne connais pas ton nom&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</span></pre></div>
+</td></tr></table></div>
+</div>
+<p><a class="reference internal" href="#code-input2"><span class="std std-numref">Program 3.3</span></a> est très similaire à <a class="reference internal" href="#code-input"><span class="std std-numref">Program 3.2</span></a>. Les nouvelles lignes ont été surlignées. Vous pouvez soit modifier <a class="reference internal" href="#code-input"><span class="std std-numref">Program 3.2</span></a>, ou créer un nouveau ficher et utiliser les fonctions copier-coller pour copier le code de l’ancien programme vers le nouveau programme.</p>
+</section>
+<section id="une-question-de-mathematique-aleatoire">
+<h2><span class="section-number">3.4. </span>Une question de mathématique aléatoire<a class="headerlink" href="#une-question-de-mathematique-aleatoire" title="Permalink to this headline"></a></h2>
+<div class="literal-block-wrapper docutils container" id="codemaths">
+<div class="code-block-caption"><span class="caption-number">Program 3.4 </span><span class="caption-text">Une question de mathématique aléatoire</span><a class="headerlink" href="#codemaths" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Qu&#39;est-ce que&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;plus 7?&quot;</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>  <span class="c1"># Pourquoi est ce qu&#39;on utilise int() ici?</span>
+<span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">7</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&#39;est bien ça&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Faux&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="topic">
+<p class="topic-title">Exercice</p>
+<p>Ajoute plus de questions. Par exemple:</p>
+<ul class="simple">
+<li><p>Au lieu de 7, utilisez un autre nombre aléatoire.</p></li>
+<li><p>Utilisez un plus grand nombre aléatoire.</p></li>
+<li><p>Multipliez (utilisez <cite>*</cite>), divisez (utilisez <cite>/</cite>) ou soustrayez (utilisez <cite>-</cite>) les nombres.</p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title">Exercice</p>
+<p>Affichez le nombre de questions que le joueur a réussi à la fin du programme.</p>
+</div>
+</section>
+<section id="garder-un-pointage">
+<h2><span class="section-number">3.5. </span>Garder un pointage<a class="headerlink" href="#garder-un-pointage" title="Permalink to this headline"></a></h2>
+<p>On a créé une variable <code class="docutils literal notranslate"><span class="pre">pointage</span></code> afin d’enregistrer le nombre de questions que le joueur a réussi.</p>
+<div class="literal-block-wrapper docutils container" id="code-maths2">
+<div class="code-block-caption"><span class="caption-number">Program 3.5 </span><span class="caption-text">Garder un pointage</span><a class="headerlink" href="#code-maths2" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">résultat</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Qu&#39;est-ce que 1+1 ?&quot;</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&#39;est bien ça&quot;</span><span class="p">)</span>
+    <span class="n">résultat</span> <span class="o">=</span> <span class="n">résultat</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Qu&#39;est-ce que 35-25 ?&quot;</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&#39;est bien ça&quot;</span><span class="p">)</span>
+    <span class="n">résultat</span> <span class="o">=</span> <span class="n">résultat</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ton résultat:&quot;</span><span class="p">,</span> <span class="n">résultat</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</section>
+<section id="jeux-de-devinettes-avec-une-boucle">
+<h2><span class="section-number">3.6. </span>Jeux de devinettes avec une boucle<a class="headerlink" href="#jeux-de-devinettes-avec-une-boucle" title="Permalink to this headline"></a></h2>
+<p>Cette boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> répète ses instructions pour toujours… ou jusqu’à ce que le joueur réussit à avoir une bonne réponse. Lorsque c’est le cas, la boucle <code class="docutils literal notranslate"><span class="pre">break</span></code> et on sort de la boucle. À noter que tous les éléments de la boucle sont en retrait.</p>
+<div class="literal-block-wrapper docutils container" id="codeloop">
+<div class="code-block-caption"><span class="caption-number">Program 3.6 </span><span class="caption-text">Jeux de devinettes avec une boucle</span><a class="headerlink" href="#codeloop" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je pense à un nombre, pouvez-vous deviner lequel?&quot;</span><span class="p">)</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Faux&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous avez trouvé!&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="topic">
+<p class="topic-title">Exercice</p>
+<p>Donnez un indice au joueur lorsqu’il n’a pas la bonne réponse. Est-ce que leur réponse était trop grande ou trop petite?</p>
+</div>
+<div class="topic">
+<p class="topic-title">Exercice</p>
+<p>Affichez le nombre de tentatives qu’a fait le joueur avant de trouver la bonne réponse.</p>
+</div>
+</section>
+<section id="jeux-de-devinettes-ameliores">
+<h2><span class="section-number">3.7. </span>Jeux de devinettes améliorés<a class="headerlink" href="#jeux-de-devinettes-ameliores" title="Permalink to this headline"></a></h2>
+<p><a class="reference internal" href="#codeloop"><span class="std std-numref">Program 3.6</span></a> avec un indice qui révèle si la tentative est trop grande ou trop petite par rapport à la réponse.</p>
+<div class="literal-block-wrapper docutils container" id="code-loop2">
+<div class="code-block-caption"><span class="caption-number">Program 3.7 </span><span class="caption-text">Jeux de devinettes améliorés</span><a class="headerlink" href="#code-loop2" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">tentatives</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">tentatives</span> <span class="o">=</span> <span class="n">tentatives</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je pense à un nombre, pouvez-vous deviner lequel?&quot;</span><span class="p">)</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">g</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trop bas&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trop haut&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&#39;est bien ça! Vous avez pris&quot;</span><span class="p">,</span> <span class="n">tentatives</span><span class="p">,</span> <span class="s2">&quot;tentatives.&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="principes_fondamentaux.html" class="btn btn-neutral float-left" title="2. Les fondements du langage Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="graphiques.html" class="btn btn-neutral float-right" title="4. Afficher des graphiques" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Richard Smith.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

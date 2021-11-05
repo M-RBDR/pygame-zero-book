@@ -16,8 +16,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Arcade games" href="simple_games.html" />
-    <link rel="prev" title="3. Text-based quiz games" href="text_quizes.html" /> 
+    <link rel="next" title="5. Jeux d’arcade" href="simple_games.html" />
+    <link rel="prev" title="3. Jeux de devinettes basés sur du texte" href="devinettes_texte.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,20 +47,20 @@
 <p class="caption"><span class="caption-text">Table des matières:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="vue_ensemble.html">1. Aperçu du langage Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="principes_fondamentaux.html">2. Les fondements du language Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principes_fondamentaux.html">2. Les fondements du langage Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devinettes_texte.html">3. Jeux de devinettes basés sur du texte</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Afficher des graphiques</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#des-lignes-et-des-cercles">4.1. Des lignes et des cercles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bouger-des-rectangles">4.2. Bouger des rectangles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#les-acteurs-sprites">4.3. Les acteurs sprites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#l-image-d-arriere-plan">4.4. L’image d’arrière plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#l-image-d-arriere-plan">4.4. L’image d’arrière-plan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#saisie-du-clavier">4.5. Saisie du clavier</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="simple_games.html">5. Arcade games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_games.html">5. Jeux d’arcade</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_graphics.html">6. Improving your games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chase.html">8. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">8. Tutorial: Chase game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="maze.html">9. Tutorial: Maze game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shooter.html">10. Tutorial: Shooting game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="race.html">11. Tutorial: Race game</a></li>
@@ -95,17 +95,17 @@
   <section id="afficher-des-graphiques">
 <h1><span class="section-number">4. </span>Afficher des graphiques<a class="headerlink" href="#afficher-des-graphiques" title="Permalink to this headline"></a></h1>
 <p>Pour créer des graphiques pour nos jeux, nous allons utiliser la bibliothèque <a class="reference external" href="https://pygame-zero.readthedocs.io">Pygame Zero</a>. Pour comprendre quelles nouvelles fonctions vous sont disponibles, vous pouvez vous référer à la documentation disponible sur son site internet!</p>
-<p>Le plus petit carré pouvant être afficher sur un moniteur s’appel un <em>pixel</em>. Ce diagrame montre une vue rapprochée d’une fenêtre de 40 pixels de large et de 40 pixels de haut. À la taille normale, vous ne verrez pas les lignes de la grille.</p>
+<p>Le plus petit carré pouvant être affiché sur un moniteur s’appelle un <em>pixel</em>. Ce diagramme montre une vue rapprochée d’une fenêtre de 40 pixels de large et de 40 pixels de haut. À la taille normale, vous ne verrez pas les lignes de la grille.</p>
 <figure class="align-default" id="id1">
 <img alt="La disposition des pixels de votre écran" src="../_images/pixelgrid.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">La disposition des pixels de votre écran</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>On peut référer à n’importe quel pixel en donant deux coordonés: <em>(x,y)</em>. La coordonnée <em>x</em> est la position horizontale du pixel et la coordonnée <em>y</em> est la position vertical du pixel. Une particularité importante à prendre en compte est que l’origine de notre système de coordonnés se trouve en haut à droite de la fenêtre. Si <em>x</em> est positif, notre <em>pixel</em> se trouvera un peu plus vers la droite. Si <em>y</em> est positif, notre <em>pixel</em> se trouvera un peu plus vers le bas. Assure toi de bien comprendre ce que sont des coordonés avant de continuer puisque tout ce qu’on va faire avec Pygame Zero va utiliser des coordonés. (En mathématique, on appel ce système de coordonés le ‘système de coordonées cartésiennes’).</p>
+<p>On peut référer à n’importe quel pixel en donnant deux coordonnés: <em>(x,y)</em>. La coordonnée <em>x</em> est la position horizontale du pixel et la coordonnée <em>y</em> est la position verticale du pixel. Une particularité importante à prendre en compte est que l’origine de notre système de coordonnées se trouve en haut à droite de la fenêtre. Si <em>x</em> est positif, notre <em>pixel</em> se trouvera un peu plus vers la droite. Si <em>y</em> est positif, notre <em>pixel</em> se trouvera un peu plus vers le bas. Assurez-vous de bien comprendre ce que sont des coordonnés avant de continuer puisque tout ce qu’on va faire avec Pygame Zero va utiliser des coordonnés. En mathématique, on appelle ce système de coordonnés le ‘système de coordonnées cartésiennes’.</p>
 <section id="des-lignes-et-des-cercles">
 <h2><span class="section-number">4.1. </span>Des lignes et des cercles<a class="headerlink" href="#des-lignes-et-des-cercles" title="Permalink to this headline"></a></h2>
-<p>Si tu utilise l’editeur Thonny, Pygame Zero est déjà inclu, mais <strong>tu dois te souvenir de sélectionner le ‘Mode Pygame Zero’ sous l’onglet ‘Exécuter’ avant de lancer ton programme</strong>!</p>
+<p>Si vous utilisez l’éditeur Thonny, Pygame Zero est déjà inclus, mais <strong>tu dois te souvenir de sélectionner le ‘Mode Pygame Zero’ sous l’onglet ‘Exécuter’ avant de lancer ton programme</strong>!</p>
 <p>Si tu utilises un autre éditeur de texte, <a class="reference external" href="https://pygame-zero.readthedocs.io/en/stable/ide-mode.html">des instructions générales se trouvent ici</a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-lines-circles">
 <div class="code-block-caption"><span class="caption-number">Program 4.1 </span><span class="caption-text">Des lignes et des cercles</span><a class="headerlink" href="#code-lines-circles" title="Permalink to this code"></a></div>
@@ -119,8 +119,8 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># What are these units? What if we change them?</span>
-<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># What if we delete this line?</span>
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>   <span class="c1"># Que sont ces valeurs? Qu&#39;arrive-t-il si on les changes?</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># Qu&#39;est-ce qui arrive si on supprime cette ligne?</span>
 
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
@@ -144,8 +144,8 @@
 </section>
 <section id="bouger-des-rectangles">
 <h2><span class="section-number">4.2. </span>Bouger des rectangles<a class="headerlink" href="#bouger-des-rectangles" title="Permalink to this headline"></a></h2>
-<p>Pour faire bouger les éléments qu’on affiche, on doit ajouter une fonction spécial qui s’appel <code class="docutils literal notranslate"><span class="pre">update()</span></code>.
-On a pas besoin d’écrire notre propre boucle puisque <em>Pygame Zero appel cette fonction pour nous dans sa propre boucle</em>, constament et plusieurs fois par secondes.</p>
+<p>Pour faire bouger les éléments qu’on affiche, on doit ajouter une fonction spéciale qui s’appelle <code class="docutils literal notranslate"><span class="pre">update()</span></code>.
+On n’a pas besoin d’écrire notre propre boucle puisque <em>Pygame Zero appelle cette fonction pour nous dans sa propre boucle</em>.</p>
 <div class="literal-block-wrapper docutils container" id="code-moving-boxes">
 <div class="code-block-caption"><span class="caption-number">Program 4.2 </span><span class="caption-text">Bouger des rectangles</span><a class="headerlink" href="#code-moving-boxes" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -182,11 +182,11 @@ On a pas besoin d’écrire notre propre boucle puisque <em>Pygame Zero appel ce
 </div>
 <div class="topic">
 <p class="topic-title">Exercice</p>
-<p>Fait bouger la boite plus rapidement.</p>
+<p>Faites bouger la boite plus rapidement.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercice</p>
-<p>Fait bouger la boite dans une autre direction.</p>
+<p>Faites bouger la boite dans une autre direction.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercice</p>
@@ -195,9 +195,9 @@ On a pas besoin d’écrire notre propre boucle puisque <em>Pygame Zero appel ce
 </section>
 <section id="les-acteurs-sprites">
 <h2><span class="section-number">4.3. </span>Les acteurs sprites<a class="headerlink" href="#les-acteurs-sprites" title="Permalink to this headline"></a></h2>
-<p>Un <code class="docutils literal notranslate"><span class="pre">acteur</span></code> est tout personnages ou objets qu’on veut insérer dans notre jeu. Un <code class="docutils literal notranslate"><span class="pre">sprite</span></code> est l’image qu’on veut utiliser pour représenter l’acteur. Les acteurs sprites sont très similaire aux boites! Ils peuvent être déplacés tout comme une boite puisqu’ils ont aussi des coordonnées. Il est important de mentionner qu’<code class="docutils literal notranslate"><span class="pre">acteur</span></code> doit s’écrire en anglais (<code class="docutils literal notranslate"><span class="pre">Actor</span></code>) lorsque vous l’utiliser dans votre code.
-Dans votre système de ficher, trouvez le fichier où se trouve votre code, cliquez sur le dossier <code class="docutils literal notranslate"><span class="pre">Images</span></code> pour voir les divers fichiers d’images disponibles.
-<code class="docutils literal notranslate"><span class="pre">extraterrestre.png</span></code> devrait s’y trouver. Si vous voulez ajouter d’autres images à votre jeu, il fault les insérer dans le dossier <code class="docutils literal notranslate"><span class="pre">Images</span></code>.</p>
+<p>Un <code class="docutils literal notranslate"><span class="pre">acteur</span></code> est tout personnage ou objet qu’on veut insérer dans notre jeu. Un <code class="docutils literal notranslate"><span class="pre">sprite</span></code> est l’image qu’on veut utiliser pour représenter l’acteur. Les acteurs sprites sont très similaires aux boites! Ils peuvent être déplacés tout comme une boite puisqu’ils ont aussi des coordonnées. Il est important de mentionner qu’<code class="docutils literal notranslate"><span class="pre">acteur</span></code> doit s’écrire en anglais (<code class="docutils literal notranslate"><span class="pre">Actor</span></code>) lorsque vous l’utilisez dans votre code.
+Dans votre système de fichier, trouvez le fichier où se trouve votre code, cliquez sur le dossier <code class="docutils literal notranslate"><span class="pre">Images</span></code> pour voir les divers fichiers d’images disponibles.
+<code class="docutils literal notranslate"><span class="pre">extraterrestre.png</span></code> devrait s’y trouver. Si vous voulez ajouter d’autres images à votre jeu, il faut les insérer dans le dossier <code class="docutils literal notranslate"><span class="pre">Images</span></code>.</p>
 <p>Vous pouvez utiliser plusieurs logiciels pour faire des sprites comme
 <a class="reference external" href="https://krita.org">Krita</a> ou <a class="reference external" href="https://libresprite.github.io/#!/">Libresprite</a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-sprites">
@@ -222,38 +222,38 @@ Dans votre système de ficher, trouvez le fichier où se trouve votre code, cliq
 18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">extraterrestre</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">&#39;extraterrestre&#39;</span><span class="p">)</span>
+<span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">extraterrestre</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
 
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">extraterrestre</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+        <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="topic">
 <p class="topic-title">Exercice</p>
-<p>Dessinez ou téléchargez vos propres images (attention aux droits d’auteurs!) pour remplacer l’image <code class="docutils literal notranslate"><span class="pre">extraterrestre.png</span></code>. Ensuite utilisez cette nouvelle image dans votre code.</p>
+<p>Dessinez ou téléchargez vos propres images (attention aux droits d’auteurs!) pour remplacer l’image <code class="docutils literal notranslate"><span class="pre">extraterrestre.png</span></code>. Ensuite, utilisez cette nouvelle image dans votre code.</p>
 </div>
 </section>
 <section id="l-image-d-arriere-plan">
-<h2><span class="section-number">4.4. </span>L’image d’arrière plan<a class="headerlink" href="#l-image-d-arriere-plan" title="Permalink to this headline"></a></h2>
-<p>Nous allons ajouter une image d’arrière plan à
+<h2><span class="section-number">4.4. </span>L’image d’arrière-plan<a class="headerlink" href="#l-image-d-arriere-plan" title="Permalink to this headline"></a></h2>
+<p>Nous allons ajouter une image d’arrière-plan à
 <a class="reference internal" href="#code-sprites"><span class="std std-numref">Program 4.3</span></a></p>
 <p>Clique sur le dossier <code class="docutils literal notranslate"><span class="pre">Images</span></code> pour voir les fichiers d’images disponibles.</p>
-<p><strong>Tu dois créer ou télécharger (attention aux droits d’auteurs!) une image afin de l’afficher en arrière plan.</strong>
-Sauvegarde l’image sous le nom <code class="docutils literal notranslate"><span class="pre">arriereplan.png</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">mu_code/images</span></code>. L’image devrait être la même largeur et longuer que la fenêtre de jeu, soit 500×500 pixels et doit être en format <code class="docutils literal notranslate"><span class="pre">.png</span></code>.</p>
+<p><strong>Tu dois créer ou télécharger (attention aux droits d’auteurs!) une image afin de l’afficher en arrière-plan.</strong>
+Sauvegarde l’image sous le nom <code class="docutils literal notranslate"><span class="pre">arriereplan.png</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">mu_code/images</span></code>. L’image devrait être la même largeur et longueur que la fenêtre de jeu, soit 500×500 pixels et doit être en format <code class="docutils literal notranslate"><span class="pre">.png</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-background">
-<div class="code-block-caption"><span class="caption-number">Program 4.4 </span><span class="caption-text">Arrière plan</span><a class="headerlink" href="#code-background" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 4.4 </span><span class="caption-text">Arrière-plan</span><a class="headerlink" href="#code-background" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -276,34 +276,34 @@ Sauvegarde l’image sous le nom <code class="docutils literal notranslate"><spa
 20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">extraterrestre</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">&#39;extraterrestre&#39;</span><span class="p">)</span>
+<span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">extraterrestre</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
 
-<span class="n">background</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">&#39;background&#39;</span><span class="p">)</span>
+<span class="n">arriere_plan</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">&#39;arriere_plan&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">arriere_plan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">extraterrestre</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+        <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="topic">
 <p class="topic-title">Exercice</p>
-<p>Crée une image afin de l’utiliser comme image d’arrière plan. Enregistre l’image sous le nom <cite>arriereplan.png</cite>. Exécute le programme.</p>
+<p>Crée une image afin de l’utiliser comme image d’arrière-plan. Enregistre l’image sous le nom <cite>arriereplan.png</cite>. Exécute le programme.</p>
 </div>
 </section>
 <section id="saisie-du-clavier">
 <h2><span class="section-number">4.5. </span>Saisie du clavier<a class="headerlink" href="#saisie-du-clavier" title="Permalink to this headline"></a></h2>
-<p>L’extraterreste bouge quand tu frappe sur les flèches de ton clavier.</p>
+<p>L’extraterrestre se déplace quand tu frappes sur les flèches de ton clavier.</p>
 <div class="literal-block-wrapper docutils container" id="code-keyboard-input">
 <div class="code-block-caption"><span class="caption-number">Program 4.5 </span><span class="caption-text">Saisie du clavier</span><a class="headerlink" href="#code-keyboard-input" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -318,25 +318,25 @@ Sauvegarde l’image sous le nom <code class="docutils literal notranslate"><spa
 10
 11
 12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">alien</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">extraterrestre</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">&#39;extraterrestre&#39;</span><span class="p">)</span>
+<span class="n">extraterrestre</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">extraterrestre</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+        <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">extraterrestre</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
 
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="topic">
 <p class="topic-title">Exercice</p>
-<p>Fait en sorte qu’on puisse bouger l’extraterrestre de haut en bas et de droite en gauche.</p>
+<p>Faites en sorte qu’on puisse déplacer l’extraterrestre de haut en bas et de droite en gauche.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercice</p>
@@ -344,7 +344,7 @@ Sauvegarde l’image sous le nom <code class="docutils literal notranslate"><spa
 </div>
 <div class="topic">
 <p class="topic-title">Exercice</p>
-<p>Utilise l’opérateur <cite>or</cite> pour premettre de déplacer l’extraterrestre avec les touches WASD ainsi qu’avec les flèches du clavier (voir <a class="reference internal" href="principes_fondamentaux.html#code-logic"><span class="std std-numref">Program 2.8</span></a>).</p>
+<p>Utilise l’opérateur <cite>or</cite> pour permettre de déplacer l’extraterrestre avec les touches WASD ainsi qu’avec les flèches du clavier (voir <a class="reference internal" href="principes_fondamentaux.html#code-logic"><span class="std std-numref">Program 2.8</span></a>).</p>
 </div>
 </section>
 </section>
@@ -353,8 +353,8 @@ Sauvegarde l’image sous le nom <code class="docutils literal notranslate"><spa
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="text_quizes.html" class="btn btn-neutral float-left" title="3. Text-based quiz games" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="simple_games.html" class="btn btn-neutral float-right" title="5. Arcade games" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="devinettes_texte.html" class="btn btn-neutral float-left" title="3. Jeux de devinettes basés sur du texte" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="simple_games.html" class="btn btn-neutral float-right" title="5. Jeux d’arcade" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

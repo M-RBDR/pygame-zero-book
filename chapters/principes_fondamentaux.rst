@@ -91,7 +91,7 @@ On peut stocker une nouvelle valeur dans une variable dans laquelle on a déjà 
 
 .. topic:: Question
 
-   Que pensez-vous que :numref:`attribuer-valeur` va afficher? Si vous n'êtes pas certain, taper le programme.
+   Que pensez-vous que :numref:`attribuer_valeur` va afficher? Si vous n'êtes pas certain, taper le programme.
 
 Il est aussi possible de prendre l'ancienne valeur d'une variable, la modifier et stocker cette modification de nouveau dans la variable.
 
@@ -107,7 +107,7 @@ Il est aussi possible de prendre l'ancienne valeur d'une variable, la modifier e
 
 .. topic:: Exercice
 
-   Qu'est-ce que :numref:`mod_variables` va afficher? Changez les numéros dans le programme. Utilisez l'opérateur de division `/`. Puis, demandez à un ami de prédire ce que le nouveau programme va afficher. Est-ce que votre ami a eu raison?
+   Qu'est-ce que :numref:`mod_variable` va afficher? Changez les numéros dans le programme. Utilisez l'opérateur de division `/`. Puis, demandez à un ami de prédire ce que le nouveau programme va afficher. Est-ce que votre ami a eu raison?
 
 
 Vous allez souvent voir ceci lorsqu'un programmeur veut compter:
@@ -523,7 +523,7 @@ need for an index or to specify the size of the range:
 
    prices = [3.49, 9.99, 2.50, 20.00]
    total = 0
-pp   for price in prices:
+   for price in prices:
        print("item costs £", price)
        total = total + price
    print("shopping total", total)
