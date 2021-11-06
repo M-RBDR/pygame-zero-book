@@ -61,11 +61,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#les-boucles-for">2.8. Les boucles for</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#nested-loops">2.8.1. Nested loops</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#incrementing-a-variable-in-a-loop">2.8.2. Incrementing a variable in a loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-boucles-imbriquees">2.8.1. Les boucles imbriquées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#incrementation-d-une-variable-dans-une-boucle">2.8.2. Incrémentation d’une variable dans une boucle</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#array-lists">2.9. Array lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#les-listes">2.9. Les listes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#looping-over-lists">2.9.1. Looping over lists</a></li>
 </ul>
 </li>
@@ -204,7 +204,7 @@
 <p class="topic-title">Exercice</p>
 <p>Copie <a class="reference internal" href="#code-fruits"><span class="std std-numref">Program 2.2</span></a>, mais ajoute 17 bananes au calcul de fruits.</p>
 </div>
-<p>On peut stocker une nouvelle valeur dans une variable dans laquelle on a déjà attribué une valeur. L’ancienne valeur sera alors oubliée.</p>
+<p>On peut stocker une nouvelle valeur dans une variable dans laquelle on a déjà stocké une valeur. L’ancienne valeur sera alors oubliée.</p>
 <div class="literal-block-wrapper docutils container" id="attribuer-valeur">
 <div class="code-block-caption"><span class="caption-number">Program 2.3 </span><span class="caption-text">Attribuer une nouvelle valeur à une variable</span><a class="headerlink" href="#attribuer-valeur" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pommes</span> <span class="o">=</span> <span class="mi">27</span>
@@ -255,10 +255,10 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">mon_texte</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Il arrive que parfois on veuille que l’usager puisse entrer un nombre au lieu d’une chaîne de caractères. On peut combiner la fonction <code class="docutils literal notranslate"><span class="pre">int()</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code> pour convertir la chaîne de charactère en nombre entier.</p>
+<p>Il arrive que parfois on veuille que l’usager puisse entrer un nombre au lieu d’une chaîne de caractères. On peut combiner la fonction <code class="docutils literal notranslate"><span class="pre">int()</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code> pour convertir la chaîne de caractère en nombre entier.</p>
 <div class="literal-block-wrapper docutils container" id="entre3">
 <div class="code-block-caption"><span class="caption-number">Program 2.6 </span><span class="caption-text">Recevoir des entrées de l’utilisateur</span><a class="headerlink" href="#entre3" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entrer un nombre&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entrez un nombre&quot;</span><span class="p">)</span>
 <span class="n">mon_nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Votre nombre doublé est&quot;</span><span class="p">,</span> <span class="n">mon_nombre</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -433,7 +433,7 @@
 </section>
 <section id="and">
 <h3><span class="section-number">2.7.2. </span>And<a class="headerlink" href="#and" title="Permalink to this headline"></a></h3>
-<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">and</span></code> est vrai (<code class="docutils literal notranslate"><span class="pre">True</span></code>) si ses deux valeurs sont vraie. Essayer cet exemple :</p>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">and</span></code> est vrai (<code class="docutils literal notranslate"><span class="pre">True</span></code>) si ses deux valeurs sont vraies. Essayer cet exemple :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
@@ -448,7 +448,7 @@
 <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quelle est ta grandeur?&quot;</span><span class="p">)</span>
 <span class="n">grandeur</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quel est la température?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quelle est la température?&quot;</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">12</span> <span class="ow">or</span> <span class="n">grandeur</span> <span class="o">&gt;</span> <span class="mi">150</span><span class="p">)</span> <span class="ow">and</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous pouvez embarquer sur les montagnes russes&quot;</span><span class="p">)</span>
@@ -501,24 +501,22 @@
 </section>
 <section id="les-boucles-for">
 <h2><span class="section-number">2.8. </span>Les boucles for<a class="headerlink" href="#les-boucles-for" title="Permalink to this headline"></a></h2>
-<p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop repeats a block of code a number of times. A variable is
-created which we can use to find the current number within the loop.
-Here the variable is called <code class="docutils literal notranslate"><span class="pre">x</span></code> but you can name it whatever you like.
-Run this program:</p>
+<p>Une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> répète son bloc de code un nombre spécifique de fois. Pour créer ce type de boucle, il faut créer une variable qui agira comme itérateur. Un itérateur est un élément qui nous indique combien de fois qu’on doit faire la boucle. Ici, la variable d’itération se nomme  <code class="docutils literal notranslate"><span class="pre">x</span></code>, mais vous pouvez la nommer n’importe quoi si vous voulez.
+Exécuter ce programme:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can also change the <em>step</em> of the loop. Run this program:</p>
+<p>Ici, la boucle se répète pour chaque <code class="docutils literal notranslate"><span class="pre">x</span></code> qui représente un élément de la fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code>. Dans l’exemple, la fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> nous donne une séquence entre 0 et 11. La boucle se répétera 11 fois puisqu’on débute avec 0 (ce qui est fréquent en programmation) et on boucle pour chaque numéro jusqu’à 10. La boucle exclut le nombre 11. Il est aussi possible de sauter des éléments de la fonction range. Ceci est possible en ajoutant un troisième argument à la fonction. Exécutez ce programme:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<section id="nested-loops">
-<h3><span class="section-number">2.8.1. </span>Nested loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline"></a></h3>
-<p>It is often useful to put one loop inside another loop.</p>
+<section id="les-boucles-imbriquees">
+<h3><span class="section-number">2.8.1. </span>Les boucles imbriquées<a class="headerlink" href="#les-boucles-imbriquees" title="Permalink to this headline"></a></h3>
+<p>Il est souvent utile d’utiliser une boucle à l’intérieur d’une boucle.</p>
 <div class="literal-block-wrapper docutils container" id="code-for-loop">
-<div class="code-block-caption"><span class="caption-number">Program 2.9 </span><span class="caption-text">Nested for loop</span><a class="headerlink" href="#code-for-loop" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 2.9 </span><span class="caption-text">Boucles imbriquées</span><a class="headerlink" href="#code-for-loop" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
@@ -528,33 +526,32 @@ Run this program:</p>
 </td></tr></table></div>
 </div>
 <div class="topic">
-<p class="topic-title">Exercise</p>
-<p>Write a program which prints out the 12 times table.</p>
+<p class="topic-title">Exercice</p>
+<p>Écrivez un programme qui affiche la table de multiplication de 12.</p>
 </div>
 </section>
-<section id="incrementing-a-variable-in-a-loop">
-<h3><span class="section-number">2.8.2. </span>Incrementing a variable in a loop<a class="headerlink" href="#incrementing-a-variable-in-a-loop" title="Permalink to this headline"></a></h3>
-<p>A baker has three customers. He asks them each how many cakes they want
-so he knows how many he must bake. He writes this program.</p>
+<section id="incrementation-d-une-variable-dans-une-boucle">
+<h3><span class="section-number">2.8.2. </span>Incrémentation d’une variable dans une boucle<a class="headerlink" href="#incrementation-d-une-variable-dans-une-boucle" title="Permalink to this headline"></a></h3>
+<p>Un boulanger a trois clients. Il demande à chacun d’eux le nombre de gâteaux qu’ils veulent pour savoir le nombre total de gâteau qu’il a besoin de cuire au four. Il écrit ce programme pour l’aider.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Customer&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;how many cakes do you want?&quot;</span><span class="p">)</span>
-<span class="n">cakes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">cakes</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Customer&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;how many cakes do you want?&quot;</span><span class="p">)</span>
-<span class="n">cakes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">cakes</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Customer&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;how many cakes do you want?&quot;</span><span class="p">)</span>
-<span class="n">cakes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">cakes</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I will bake&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="s2">&quot;cakes!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Client&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;combien de gâteaux voulez-vous?&quot;</span><span class="p">)</span>
+<span class="n">gateaux</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">gateaux</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Client&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;combien de gâteaux voulez-vous?&quot;</span><span class="p">)</span>
+<span class="n">gateaux</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">gateaux</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Client&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;combien de gâteaux voulez-vous?&quot;</span><span class="p">)</span>
+<span class="n">gateaux</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">gateaux</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je vais cuire au four&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="s2">&quot;gâteaux!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="topic">
-<p class="topic-title">Exercise</p>
-<p>This program is longer than it needs to be.  Write your own program that does the same thing using a <cite>for</cite> loop.  It should be only 6 (or fewer) lines long.</p>
+<p class="topic-title">Exercice</p>
+<p>Ce programme est plus long qu’il devrait être. Écrivez votre propre programme qui affiche la même chose en utilisant une boucle <cite>for</cite>. Le programme devrait avoir seulement 6 lignes (ou moins).</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baker">
-<div class="code-block-caption"><span class="caption-number">Program 2.10 </span><span class="caption-text">Possible solution to baker program exercise</span><a class="headerlink" href="#code-baker" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 2.10 </span><span class="caption-text">Une solution possible pour l’exercice du programme du boulanger</span><a class="headerlink" href="#code-baker" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -562,25 +559,23 @@ so he knows how many he must bake. He writes this program.</p>
 5
 6</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="n">total</span><span class="o">=</span><span class="mi">0</span>
  <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
-     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Customer&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;how many cakes do you want?&quot;</span><span class="p">)</span>
-     <span class="n">cakes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-     <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">cakes</span>
- <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I will bake&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="s2">&quot;cakes!&quot;</span><span class="p">)</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Client&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;combien de gâteaux voulez-vous?&quot;</span><span class="p">)</span>
+     <span class="n">gateaux</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+     <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">gateaux</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je vais cuire au four&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="s2">&quot;gâteaux!&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="topic">
-<p class="topic-title">Exercise</p>
-<p>The baker gets a fourth customer.  Change <a class="reference internal" href="#code-baker"><span class="std std-numref">Program 2.10</span></a> so it works for 4 customers.</p>
+<p class="topic-title">Exercice</p>
+<p>Le boulanger reçoit un quatrième client. Changez <a class="reference internal" href="#code-baker"><span class="std std-numref">Program 2.10</span></a> afin de permettre au boulanger de servir un quatrième client.</p>
 </div>
 <div class="topic">
-<p class="topic-title">Exercise</p>
-<p>The baker has a different number of customers every day.  Change the program so it
-asks how many customers there are. Store the number typed by the user in a variable
-called <cite>c</cite>. Change the loop so it works for <cite>c</cite> customers rather than 4 customers.</p>
+<p class="topic-title">Exercice</p>
+<p>Le boulanger a un nombre différent de clients chaque jour. Changez le programme afin qu’il demande à l’usager le nombre de clients qu’il reçoit. Stockez ce numéro dans une variable nommée <cite>c</cite>. Modifiez la boucle pour qu’elle fonctionne avec la valeur de <cite>c</cite> plutôt qu’avec un nombre arbitraire comme 4 clients.</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baker2">
-<div class="code-block-caption"><span class="caption-number">Program 2.11 </span><span class="caption-text">Possible solution to variable number of customers exercise</span><a class="headerlink" href="#code-baker2" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 2.11 </span><span class="caption-text">Une solution possible pour l’exercice sur le nombre variable de clients</span><a class="headerlink" href="#code-baker2" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -588,27 +583,26 @@ called <cite>c</cite>. Change the loop so it works for <cite>c</cite> customers 
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How many customers are there today?&quot;</span><span class="p">)</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Combien de clients sont présents aujourd&#39;hui?&quot;</span><span class="p">)</span>
  <span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
  <span class="n">total</span><span class="o">=</span><span class="mi">0</span>
  <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Customer&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;how many cakes do you want?&quot;</span><span class="p">)</span>
-     <span class="n">cakes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-     <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">cakes</span>
- <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I will bake&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="s2">&quot;cakes!&quot;</span><span class="p">)</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Customer&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;combien de gâteaux voulez-vous?&quot;</span><span class="p">)</span>
+     <span class="n">gateaux</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+     <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">gateaux</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je vais cuire au four&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="s2">&quot;gateaux!&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="topic">
-<p class="topic-title">Exercise</p>
-<p>If a customer orders 12 cakes, he gets an extra cake for free.  Use an <cite>if</cite> statement to check <cite>cakes &gt; 12</cite>. If so, add one more cake.</p>
+<p class="topic-title">Exercice</p>
+<p>Si un client fait une commande pour 12 gâteaux, il en reçoit un gratuit. Utilisez un l’instruction <cite>if</cite> pour vérifié si <cite>gateaux &gt; 12</cite>. Si c’est le cas, ajoutez un gâteau supplémentaire.</p>
 </div>
 </section>
 </section>
-<section id="array-lists">
-<h2><span class="section-number">2.9. </span>Array lists<a class="headerlink" href="#array-lists" title="Permalink to this headline"></a></h2>
-<p>Variables can be stored together in a <em>list</em>. Most languages call this
-an <em>array</em> so try to remember that word also. <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
+<section id="les-listes">
+<h2><span class="section-number">2.9. </span>Les listes<a class="headerlink" href="#les-listes" title="Permalink to this headline"></a></h2>
+<p>Les variables peuvent être stockées ensemble et dans une séquence au travers d’une <em>list</em>. La plupart des langages de programmation nomment ces listes des tableaux (ou array). <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
 <div class="literal-block-wrapper docutils container" id="code-arrays">
 <div class="code-block-caption"><span class="caption-number">Program 2.12 </span><span class="caption-text">Array lists</span><a class="headerlink" href="#code-arrays" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1

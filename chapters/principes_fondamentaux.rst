@@ -78,7 +78,7 @@ On peut utiliser des variables aux mêmes endroits qu'on peut utiliser des litt�
    Copie :numref:`code-fruits`, mais ajoute 17 bananes au calcul de fruits.
 
 
-On peut stocker une nouvelle valeur dans une variable dans laquelle on a déjà attribué une valeur. L'ancienne valeur sera alors oubliée.
+On peut stocker une nouvelle valeur dans une variable dans laquelle on a déjà stocké une valeur. L'ancienne valeur sera alors oubliée.
 
 .. code-block::
    :caption: Attribuer une nouvelle valeur à une variable
@@ -138,13 +138,13 @@ Les entrés
    mon_texte = input()
    print(mon_texte)
 
-Il arrive que parfois on veuille que l'usager puisse entrer un nombre au lieu d'une chaîne de caractères. On peut combiner la fonction ``int()`` avec la fonction ``input()`` pour convertir la chaîne de charactère en nombre entier.
+Il arrive que parfois on veuille que l'usager puisse entrer un nombre au lieu d'une chaîne de caractères. On peut combiner la fonction ``int()`` avec la fonction ``input()`` pour convertir la chaîne de caractère en nombre entier.
 
 .. code-block::
    :caption: Recevoir des entrées de l'utilisateur
    :name: entré3
 
-   print("Entrer un nombre")
+   print("Entrez un nombre")
    mon_nombre = int(input())
    print("Votre nombre doublé est", mon_nombre * 2)
 
@@ -271,7 +271,7 @@ Une solution possible:
 And
 ~~~
 
-L'opérateur ``and`` est vrai (``True``) si ses deux valeurs sont vraie. Essayer cet exemple :
+L'opérateur ``and`` est vrai (``True``) si ses deux valeurs sont vraies. Essayer cet exemple :
 
 .. code:: python
 
@@ -294,7 +294,7 @@ Une solution possible:
    age = int(input())
    print("Quelle est ta grandeur?")
    grandeur = int(input())
-   print("Quel est la température?")
+   print("Quelle est la température?")
    temp = int(input())
    if (age > 12 or grandeur > 150) and temp < 30:
        print("Vous pouvez embarquer sur les montagnes russes")
@@ -355,30 +355,28 @@ Une solution possible:
 Les boucles for
 ---------------
 
-A ``for`` loop repeats a block of code a number of times. A variable is
-created which we can use to find the current number within the loop.
-Here the variable is called ``x`` but you can name it whatever you like.
-Run this program:
+Une boucle ``for`` répète son bloc de code un nombre spécifique de fois. Pour créer ce type de boucle, il faut créer une variable qui agira comme itérateur. Un itérateur est un élément qui nous indique combien de fois qu'on doit faire la boucle. Ici, la variable d'itération se nomme  ``x``, mais vous pouvez la nommer n'importe quoi si vous voulez.
+Exécuter ce programme:
 
 .. code:: python
 
     for x in range(0, 11):
         print(x)
 
-You can also change the *step* of the loop. Run this program:
+Ici, la boucle se répète pour chaque ``x`` qui représente un élément de la fonction ``range()``. Dans l'exemple, la fonction ``range()`` nous donne une séquence entre 0 et 11. La boucle se répétera 11 fois puisqu'on débute avec 0 (ce qui est fréquent en programmation) et on boucle pour chaque numéro jusqu'à 10. La boucle exclut le nombre 11. Il est aussi possible de sauter des éléments de la fonction range. Ceci est possible en ajoutant un troisième argument à la fonction. Exécutez ce programme:
 
 .. code:: python
 
     for x in range(0, 11, 2):
         print(x)
 
-Nested loops
-~~~~~~~~~~~~
+Les boucles imbriquées
+~~~~~~~~~~~~~~~~~~~~~~
 
-It is often useful to put one loop inside another loop.
+Il est souvent utile d'utiliser une boucle à l'intérieur d'une boucle.
 
 .. code-block::
-   :caption: Nested for loop
+   :caption: Boucles imbriquées
    :name: code-for_loop
    :linenos:
 
@@ -387,90 +385,86 @@ It is often useful to put one loop inside another loop.
            print(a, "times", b, "is", a * b)
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   Write a program which prints out the 12 times table.
+   Écrivez un programme qui affiche la table de multiplication de 12.
 
 
-Incrementing a variable in a loop
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Incrémentation d'une variable dans une boucle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A baker has three customers. He asks them each how many cakes they want
-so he knows how many he must bake. He writes this program.
+Un boulanger a trois clients. Il demande à chacun d'eux le nombre de gâteaux qu'ils veulent pour savoir le nombre total de gâteau qu'il a besoin de cuire au four. Il écrit ce programme pour l'aider.
 
 .. code:: python
 
     total = 0
-    print("Customer", 1, "how many cakes do you want?")
-    cakes = int(input())
-    total = total + cakes
-    print("Customer", 2, "how many cakes do you want?")
-    cakes = int(input())
-    total = total + cakes
-    print("Customer", 3, "how many cakes do you want?")
-    cakes = int(input())
-    total = total + cakes
-    print("I will bake", total, "cakes!")
+    print("Client", 1, "combien de gâteaux voulez-vous?")
+    gateaux = int(input())
+    total = total + gateaux
+    print("Client", 2, "combien de gâteaux voulez-vous?")
+    gateaux = int(input())
+    total = total + gateaux
+    print("Client", 3, "combien de gâteaux voulez-vous?")
+    gateaux = int(input())
+    total = total + gateaux
+    print("Je vais cuire au four", total, "gâteaux!")
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   This program is longer than it needs to be.  Write your own program that does the same thing using a `for` loop.  It should be only 6 (or fewer) lines long.
+   Ce programme est plus long qu'il devrait être. Écrivez votre propre programme qui affiche la même chose en utilisant une boucle `for`. Le programme devrait avoir seulement 6 lignes (ou moins).
 
 
 
 
 .. code-block::
-   :caption: Possible solution to baker program exercise
+   :caption: Une solution possible pour l'exercice du programme du boulanger
    :name: code-baker
    :linenos:
 
     total=0
     for x in range(1, 4):
-        print("Customer", x, "how many cakes do you want?")
-        cakes = int(input())
-        total = total + cakes
-    print("I will bake", total, "cakes!")
+        print("Client", x, "combien de gâteaux voulez-vous?")
+        gateaux = int(input())
+        total = total + gateaux
+    print("Je vais cuire au four", total, "gâteaux!")
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   The baker gets a fourth customer.  Change :numref:`code-baker` so it works for 4 customers.
+   Le boulanger reçoit un quatrième client. Changez :numref:`code-baker` afin de permettre au boulanger de servir un quatrième client.
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   The baker has a different number of customers every day.  Change the program so it
-   asks how many customers there are. Store the number typed by the user in a variable
-   called `c`. Change the loop so it works for `c` customers rather than 4 customers.
+   Le boulanger a un nombre différent de clients chaque jour. Changez le programme afin qu'il demande à l'usager le nombre de clients qu'il reçoit. Stockez ce numéro dans une variable nommée `c`. Modifiez la boucle pour qu'elle fonctionne avec la valeur de `c` plutôt qu'avec un nombre arbitraire comme 4 clients.
 
 
 
 
 .. code-block::
-   :caption: Possible solution to variable number of customers exercise
+   :caption: Une solution possible pour l'exercice sur le nombre variable de clients
    :name: code-baker2
    :linenos:
 
-    print("How many customers are there today?")
+    print("Combien de clients sont présents aujourd'hui?")
     c = int(input())
     total=0
     for x in range(1, c+1):
-        print("Customer", x, "how many cakes do you want?")
-        cakes = int(input())
-        total = total + cakes
-    print("I will bake", total, "cakes!")
+        print("Customer", x, "combien de gâteaux voulez-vous?")
+        gateaux = int(input())
+        total = total + gateaux
+    print("Je vais cuire au four", total, "gateaux!")
 
 
-.. topic:: Exercise
+.. topic:: Exercice
 
-   If a customer orders 12 cakes, he gets an extra cake for free.  Use an `if` statement to check `cakes > 12`. If so, add one more cake.
+   Si un client fait une commande pour 12 gâteaux, il en reçoit un gratuit. Utilisez un l'instruction `if` pour vérifié si `gateaux > 12`. Si c'est le cas, ajoutez un gâteau supplémentaire.
 
 
-Array lists
------------
+Les listes
+----------
 
-Variables can be stored together in a *list*. Most languages call this
-an *array* so try to remember that word also. [1]_
+Les variables peuvent être stockées ensemble et dans une séquence au travers d'une *list*. La plupart des langages de programmation nomment ces listes des tableaux (ou array). [1]_
 
 .. literalinclude:: programs/0C_arrays.py
    :caption: Array lists
