@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10. Tutorial: Shooting game &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>11. Tutorial: Shooting game &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -16,8 +16,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11. Tutorial: Race game" href="race.html" />
-    <link rel="prev" title="9. Tutorial: Maze game" href="maze.html" /> 
+    <link rel="next" title="12. Tutorial: Race game" href="race.html" />
+    <link rel="prev" title="10. Tutorial: Maze game" href="maze.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,28 +51,29 @@
 <li class="toctree-l1"><a class="reference internal" href="devinettes_texte.html">3. Jeux de devinettes basés sur du texte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphiques.html">4. Afficher des graphiques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jeux_simples.html">5. Jeux d’arcade simples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">6. Improving your games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">8. Tutorial: Chase game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maze.html">9. Tutorial: Maze game</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Tutorial: Shooting game</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#step-1-decide-what-actors-you-will-need">10.1. Step 1: Decide what Actors you will need</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-2-draw-your-actors">10.2. Step 2: Draw your Actors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-3-move-your-actors">10.3. Step 3: Move your Actors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-4-define-your-functions">10.4. Step 4: Define your functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-enemies">10.5. Create enemies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#move-the-player">10.6. Move the player</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#move-the-enemies">10.7. Move the enemies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#draw-text-on-the-screen">10.8. Draw text on the screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#player-bullets">10.9. Player bullets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#enemy-bombs">10.10. Enemy bombs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#check-for-end-of-level">10.11. Check for end of level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ideas-for-extension">10.12. Ideas for extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boink.html">6. Boink!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">7. Improving your games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">8. More advanced games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">9. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maze.html">10. Tutorial: Maze game</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Tutorial: Shooting game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-decide-what-actors-you-will-need">11.1. Step 1: Decide what Actors you will need</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-draw-your-actors">11.2. Step 2: Draw your Actors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-move-your-actors">11.3. Step 3: Move your Actors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-define-your-functions">11.4. Step 4: Define your functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-enemies">11.5. Create enemies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#move-the-player">11.6. Move the player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#move-the-enemies">11.7. Move the enemies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#draw-text-on-the-screen">11.8. Draw text on the screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#player-bullets">11.9. Player bullets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemy-bombs">11.10. Enemy bombs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check-for-end-of-level">11.11. Check for end of level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ideas-for-extension">11.12. Ideas for extension</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="race.html">11. Tutorial: Race game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced.html">12. Advanced topics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="minecraft.html">13. Python in Minecraft</a></li>
+<li class="toctree-l1"><a class="reference internal" href="race.html">12. Tutorial: Race game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">13. Advanced topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minecraft.html">14. Python in Minecraft</a></li>
 </ul>
 
         </div>
@@ -89,7 +90,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">10. </span>Tutorial: Shooting game</li>
+      <li><span class="section-number">11. </span>Tutorial: Shooting game</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/shooter.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -100,11 +101,11 @@
            <div itemprop="articleBody">
              
   <section id="tutorial-shooting-game">
-<h1><span class="section-number">10. </span>Tutorial: Shooting game<a class="headerlink" href="#tutorial-shooting-game" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">11. </span>Tutorial: Shooting game<a class="headerlink" href="#tutorial-shooting-game" title="Permalink to this headline"></a></h1>
 <p>In this chapter we will build a shooting game together, step by step.
 The Python we will use is: conditionals, loops, lists and functions.</p>
 <section id="step-1-decide-what-actors-you-will-need">
-<h2><span class="section-number">10.1. </span>Step 1: Decide what Actors you will need<a class="headerlink" href="#step-1-decide-what-actors-you-will-need" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.1. </span>Step 1: Decide what Actors you will need<a class="headerlink" href="#step-1-decide-what-actors-you-will-need" title="Permalink to this headline"></a></h2>
 <p>Our game will need these Actors, so <strong>we must create images for all of
 them and save them</strong> as <code class="docutils literal notranslate"><span class="pre">.png</span></code> files in the <code class="docutils literal notranslate"><span class="pre">images</span></code> folder.</p>
 <table class="docutils align-default">
@@ -146,7 +147,7 @@ them and save them</strong> as <code class="docutils literal notranslate"><span 
 others are lists which we initialize to the empty list <code class="docutils literal notranslate"><span class="pre">[]</span></code>. Actors
 will be appended to the lists later.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17a">
-<div class="code-block-caption"><span class="caption-number">Program 10.1 </span><span class="caption-text">Shooter game part 1 of 4</span><a class="headerlink" href="#code-shoot17a" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 11.1 </span><span class="caption-text">Shooter game part 1 of 4</span><a class="headerlink" href="#code-shoot17a" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -183,11 +184,11 @@ will be appended to the lists later.</p>
 </div>
 </section>
 <section id="step-2-draw-your-actors">
-<h2><span class="section-number">10.2. </span>Step 2: Draw your Actors<a class="headerlink" href="#step-2-draw-your-actors" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.2. </span>Step 2: Draw your Actors<a class="headerlink" href="#step-2-draw-your-actors" title="Permalink to this headline"></a></h2>
 <p>Every Pygame game needs an <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function, and it should draw all
 the Actors we created above.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17b">
-<div class="code-block-caption"><span class="caption-number">Program 10.2 </span><span class="caption-text">Shooter game part 2 of 4</span><a class="headerlink" href="#code-shoot17b" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 11.2 </span><span class="caption-text">Shooter game part 2 of 4</span><a class="headerlink" href="#code-shoot17b" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -216,11 +217,11 @@ the Actors we created above.</p>
 </div>
 </section>
 <section id="step-3-move-your-actors">
-<h2><span class="section-number">10.3. </span>Step 3: Move your Actors<a class="headerlink" href="#step-3-move-your-actors" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.3. </span>Step 3: Move your Actors<a class="headerlink" href="#step-3-move-your-actors" title="Permalink to this headline"></a></h2>
 <p>Every Pygame game needs an <code class="docutils literal notranslate"><span class="pre">update()</span></code> function to move the Actors,
 check for collisions, etc.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17c">
-<div class="code-block-caption"><span class="caption-number">Program 10.3 </span><span class="caption-text">Shooter game part 3 of 4</span><a class="headerlink" href="#code-shoot17c" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 11.3 </span><span class="caption-text">Shooter game part 3 of 4</span><a class="headerlink" href="#code-shoot17c" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -241,11 +242,11 @@ check for collisions, etc.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>
-<p>Create the png image files (<code class="docutils literal notranslate"><span class="pre">player.png,</span> <span class="pre">background.png,</span> <span class="pre">bullet.png,</span> <span class="pre">bomb.png,</span> <span class="pre">enemy.png</span></code>).  Type in program <a class="reference internal" href="#code-shoot17a"><span class="std std-numref">Program 10.1</span></a>, <a class="reference internal" href="#code-shoot17b"><span class="std std-numref">Program 10.2</span></a> and <a class="reference internal" href="#code-shoot17c"><span class="std std-numref">Program 10.3</span></a> into a single file.  Save the file.  Why doesn’t it run?</p>
+<p>Create the png image files (<code class="docutils literal notranslate"><span class="pre">player.png,</span> <span class="pre">background.png,</span> <span class="pre">bullet.png,</span> <span class="pre">bomb.png,</span> <span class="pre">enemy.png</span></code>).  Type in program <a class="reference internal" href="#code-shoot17a"><span class="std std-numref">Program 11.1</span></a>, <a class="reference internal" href="#code-shoot17b"><span class="std std-numref">Program 11.2</span></a> and <a class="reference internal" href="#code-shoot17c"><span class="std std-numref">Program 11.3</span></a> into a single file.  Save the file.  Why doesn’t it run?</p>
 </div>
 </section>
 <section id="step-4-define-your-functions">
-<h2><span class="section-number">10.4. </span>Step 4: Define your functions<a class="headerlink" href="#step-4-define-your-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.4. </span>Step 4: Define your functions<a class="headerlink" href="#step-4-define-your-functions" title="Permalink to this headline"></a></h2>
 <p>Python cannot call a function that has not yet been defined. Therefore
 we must at least provide empty, dummy versions of our functions that
 don’t do anything so we can fill them in later. However Python cannot
@@ -253,7 +254,7 @@ define a completely empty function - it must contain at least one line.
 Therefore we use the <code class="docutils literal notranslate"><span class="pre">pass</span></code> keyword to create a line that doesn’t do
 anything.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17d">
-<div class="code-block-caption"><span class="caption-number">Program 10.4 </span><span class="caption-text">Shooter game part 4 of 4</span><a class="headerlink" href="#code-shoot17d" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 11.4 </span><span class="caption-text">Shooter game part 4 of 4</span><a class="headerlink" href="#code-shoot17d" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -300,11 +301,11 @@ anything.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>
-<p>Add listing <a class="reference internal" href="#code-shoot17d"><span class="std std-numref">Program 10.4</span></a> to the end of the file.  Verify the game now runs and you can see the player at the bottom of the screen.  (He can’t move yet.)</p>
+<p>Add listing <a class="reference internal" href="#code-shoot17d"><span class="std std-numref">Program 11.4</span></a> to the end of the file.  Verify the game now runs and you can see the player at the bottom of the screen.  (He can’t move yet.)</p>
 </div>
 </section>
 <section id="create-enemies">
-<h2><span class="section-number">10.5. </span>Create enemies<a class="headerlink" href="#create-enemies" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.5. </span>Create enemies<a class="headerlink" href="#create-enemies" title="Permalink to this headline"></a></h2>
 <p>Add this new function to the end of the program, and then call it
 immediately. It uses a loop within a loop to create enemy Actors and put
 them in the <code class="docutils literal notranslate"><span class="pre">enemies</span></code> list. The reason we put this in a function is we
@@ -322,7 +323,7 @@ will need to call it again at the start of each level.</p>
 </div>
 </section>
 <section id="move-the-player">
-<h2><span class="section-number">10.6. </span>Move the player<a class="headerlink" href="#move-the-player" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.6. </span>Move the player<a class="headerlink" href="#move-the-player" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">move_player()</span></code> dummy function definition with this.
 Remember <strong>there can only be one function with a given name</strong>. <em>There
 cannot be two ``move_player()`` function definitions.</em></p>
@@ -339,7 +340,7 @@ cannot be two ``move_player()`` function definitions.</em></p>
 </div>
 </section>
 <section id="move-the-enemies">
-<h2><span class="section-number">10.7. </span>Move the enemies<a class="headerlink" href="#move-the-enemies" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.7. </span>Move the enemies<a class="headerlink" href="#move-the-enemies" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">move_enemies()</span></code> dummy function definition with this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">move_enemies</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">score</span>
@@ -359,7 +360,7 @@ cannot be two ``move_player()`` function definitions.</em></p>
 </div>
 </section>
 <section id="draw-text-on-the-screen">
-<h2><span class="section-number">10.8. </span>Draw text on the screen<a class="headerlink" href="#draw-text-on-the-screen" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.8. </span>Draw text on the screen<a class="headerlink" href="#draw-text-on-the-screen" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">draw_text()</span></code> dummy function definition with this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_text</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;Level &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">level</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
@@ -369,7 +370,7 @@ cannot be two ``move_player()`` function definitions.</em></p>
 </div>
 </section>
 <section id="player-bullets">
-<h2><span class="section-number">10.9. </span>Player bullets<a class="headerlink" href="#player-bullets" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.9. </span>Player bullets<a class="headerlink" href="#player-bullets" title="Permalink to this headline"></a></h2>
 <p>Add this new function to the end of the program. Pygame will call it for
 us automatically when a key is pressed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_key_down</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
@@ -388,7 +389,7 @@ us automatically when a key is pressed.</p>
 </div>
 </section>
 <section id="enemy-bombs">
-<h2><span class="section-number">10.10. </span>Enemy bombs<a class="headerlink" href="#enemy-bombs" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.10. </span>Enemy bombs<a class="headerlink" href="#enemy-bombs" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">create_bombs()</span></code> dummy function definition with this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_bombs</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">level</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -411,7 +412,7 @@ us automatically when a key is pressed.</p>
 </div>
 </section>
 <section id="check-for-end-of-level">
-<h2><span class="section-number">10.11. </span>Check for end of level<a class="headerlink" href="#check-for-end-of-level" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.11. </span>Check for end of level<a class="headerlink" href="#check-for-end-of-level" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">check_for_end_of_level()</span></code> dummy function definition with
 this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_for_end_of_level</span><span class="p">():</span>
@@ -423,7 +424,7 @@ this:</p>
 </div>
 </section>
 <section id="ideas-for-extension">
-<h2><span class="section-number">10.12. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.12. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Draw an explosion image and create an explosion Actor every time an
 alien dies.</p></li>
@@ -441,8 +442,8 @@ allows him to fire additional bullets.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="maze.html" class="btn btn-neutral float-left" title="9. Tutorial: Maze game" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="race.html" class="btn btn-neutral float-right" title="11. Tutorial: Race game" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="maze.html" class="btn btn-neutral float-left" title="10. Tutorial: Maze game" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="race.html" class="btn btn-neutral float-right" title="12. Tutorial: Race game" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

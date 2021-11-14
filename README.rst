@@ -7,10 +7,10 @@ Cahier d'exercices de l'élève, 2e édition, révisée
 `Lire le texte
 ici <https://m-rbdr.github.io/pygame-zero-book/>`__
 
-Soutenir l'auteur en achetant `le
+Soutenir l'auteur en achetant (en anglais) `le
 livre <https://www.amazon.co.uk/dp/1071147706>`__.
 
-La version `noire et blanc
+La version (en anglais) `noire et blanc
 <https://www.amazon.co.uk/Coding-Games-Pygame-Zero-Python/dp/1695028805>`__.
 
 Il a aussi `un jeu <http://retrowar.net>`__.

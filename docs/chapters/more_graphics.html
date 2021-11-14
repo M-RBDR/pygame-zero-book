@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. Improving your games &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>7. Improving your games &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -16,8 +16,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. More advanced games" href="more_games.html" />
-    <link rel="prev" title="5. Jeux d’arcade simples" href="jeux_simples.html" /> 
+    <link rel="next" title="8. More advanced games" href="more_games.html" />
+    <link rel="prev" title="6. Boink!" href="boink.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,21 +51,22 @@
 <li class="toctree-l1"><a class="reference internal" href="devinettes_texte.html">3. Jeux de devinettes basés sur du texte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphiques.html">4. Afficher des graphiques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jeux_simples.html">5. Jeux d’arcade simples</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Improving your games</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#joystick-input">6.1. Joystick input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#colours">6.2. Colours</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#using-loops">6.3. Using loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fullscreen-mode">6.4. Fullscreen mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#displaying-the-score">6.5. Displaying the score</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boink.html">6. Boink!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Improving your games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#joystick-input">7.1. Joystick input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colours">7.2. Colours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-loops">7.3. Using loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fullscreen-mode">7.4. Fullscreen mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-the-score">7.5. Displaying the score</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">8. Tutorial: Chase game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maze.html">9. Tutorial: Maze game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shooter.html">10. Tutorial: Shooting game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="race.html">11. Tutorial: Race game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced.html">12. Advanced topics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="minecraft.html">13. Python in Minecraft</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">8. More advanced games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">9. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maze.html">10. Tutorial: Maze game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shooter.html">11. Tutorial: Shooting game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="race.html">12. Tutorial: Race game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">13. Advanced topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minecraft.html">14. Python in Minecraft</a></li>
 </ul>
 
         </div>
@@ -82,7 +83,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">6. </span>Improving your games</li>
+      <li><span class="section-number">7. </span>Improving your games</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/more_graphics.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,20 +94,20 @@
            <div itemprop="articleBody">
              
   <section id="improving-your-games">
-<h1><span class="section-number">6. </span>Improving your games<a class="headerlink" href="#improving-your-games" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">7. </span>Improving your games<a class="headerlink" href="#improving-your-games" title="Permalink to this headline"></a></h1>
 <p>Here are some tips that will enable you to enhance your games.</p>
 <section id="joystick-input">
-<h2><span class="section-number">6.1. </span>Joystick input<a class="headerlink" href="#joystick-input" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.1. </span>Joystick input<a class="headerlink" href="#joystick-input" title="Permalink to this headline"></a></h2>
 <p>You may call them <em>gamepads</em> or <em>controllers</em>, but Pygame calls them
 <em>joysticks</em>.</p>
 <p>Some controllers have different inputs and some are not compatible at
 all so don’t be surprised if this doesnt work properly! PS4 and Xbox One
 controllers connected by USB cable seems to work best. Use
-<a class="reference internal" href="advanced.html#code-joystick-tester"><span class="std std-numref">Program 12.3</span></a> to test yours and find
+<a class="reference internal" href="advanced.html#code-joystick-tester"><span class="std std-numref">Program 13.3</span></a> to test yours and find
 out what inputs it has. Note: if you run this program with no controller
 plugged in you will get an error.</p>
 <div class="literal-block-wrapper docutils container" id="code-joystick-input">
-<div class="code-block-caption"><span class="caption-number">Program 6.1 </span><span class="caption-text">Joystick input</span><a class="headerlink" href="#code-joystick-input" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 7.1 </span><span class="caption-text">Joystick input</span><a class="headerlink" href="#code-joystick-input" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -155,14 +156,14 @@ plugged in you will get an error.</p>
 </div>
 </section>
 <section id="colours">
-<h2><span class="section-number">6.2. </span>Colours<a class="headerlink" href="#colours" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.2. </span>Colours<a class="headerlink" href="#colours" title="Permalink to this headline"></a></h2>
 <p>Note that sometimes <em>colour</em> is spelt <em>color</em> in American programs.</p>
 <p>Instead of using ready made colours like ‘red’, ‘yellow’, etc. you can
 create your own color with a <em>tuple</em> of three numbers. The numbers must
 be between 0 - 255 and represent how much <em>red</em>, <em>green</em> and <em>blue</em> to
 mix together.</p>
 <div class="literal-block-wrapper docutils container" id="code-colours">
-<div class="code-block-caption"><span class="caption-number">Program 6.2 </span><span class="caption-text">RGB colours</span><a class="headerlink" href="#code-colours" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 7.2 </span><span class="caption-text">RGB colours</span><a class="headerlink" href="#code-colours" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -215,12 +216,12 @@ mix together.</p>
 </div>
 </section>
 <section id="using-loops">
-<h2><span class="section-number">6.3. </span>Using loops<a class="headerlink" href="#using-loops" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.3. </span>Using loops<a class="headerlink" href="#using-loops" title="Permalink to this headline"></a></h2>
 <p>The loops from <code class="xref std std-numref docutils literal notranslate"><span class="pre">code-loop</span></code> are useful for
 graphical games too! Here we draw red circles using a <em>for loop</em>.</p>
 <p>We draw green circles using a <em>loop within another loop</em>.</p>
 <div class="literal-block-wrapper docutils container" id="code-loops">
-<div class="code-block-caption"><span class="caption-number">Program 6.3 </span><span class="caption-text">Loops are useful</span><a class="headerlink" href="#code-loops" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 7.3 </span><span class="caption-text">Loops are useful</span><a class="headerlink" href="#code-loops" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -254,20 +255,20 @@ graphical games too! Here we draw red circles using a <em>for loop</em>.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Advanced</p>
-<p>Learn about RGB colour and make random colours (see <a class="reference internal" href="#code-colours"><span class="std std-numref">Program 6.2</span></a>).</p>
+<p>Learn about RGB colour and make random colours (see <a class="reference internal" href="#code-colours"><span class="std std-numref">Program 7.2</span></a>).</p>
 </div>
 <div class="topic">
 <p class="topic-title">Advanced</p>
-<p>Create a timer variable and change colours based on time (see <a class="reference internal" href="more_games.html#code-timer"><span class="std std-numref">Program 7.5</span></a>)</p>
+<p>Create a timer variable and change colours based on time (see <a class="reference internal" href="more_games.html#code-timer"><span class="std std-numref">Program 8.5</span></a>)</p>
 </div>
 </section>
 <section id="fullscreen-mode">
-<h2><span class="section-number">6.4. </span>Fullscreen mode<a class="headerlink" href="#fullscreen-mode" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.4. </span>Fullscreen mode<a class="headerlink" href="#fullscreen-mode" title="Permalink to this headline"></a></h2>
 <p>Sometimes it is nice to play your game using the entire screen rather
 than in a window. Add these lines to any game to enable fullscreen mode.
 Then press <em>F</em> to go fullscreen, <em>ESCAPE</em> to quit.</p>
 <div class="literal-block-wrapper docutils container" id="code-full-screen-mode">
-<div class="code-block-caption"><span class="caption-number">Program 6.4 </span><span class="caption-text">Fullscreen mode</span><a class="headerlink" href="#code-full-screen-mode" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 7.4 </span><span class="caption-text">Fullscreen mode</span><a class="headerlink" href="#code-full-screen-mode" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -304,12 +305,12 @@ Then press <em>F</em> to go fullscreen, <em>ESCAPE</em> to quit.</p>
 </div>
 </section>
 <section id="displaying-the-score">
-<h2><span class="section-number">6.5. </span>Displaying the score<a class="headerlink" href="#displaying-the-score" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.5. </span>Displaying the score<a class="headerlink" href="#displaying-the-score" title="Permalink to this headline"></a></h2>
 <p>This game shows how you can keep the score in a variable and print it on
 to the game screen. You can display any other messages to the player the
 same way.</p>
 <div class="literal-block-wrapper docutils container" id="code-displaying-text">
-<div class="code-block-caption"><span class="caption-number">Program 6.5 </span><span class="caption-text">Keeping score in a variable and displaying it</span><a class="headerlink" href="#code-displaying-text" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 7.5 </span><span class="caption-text">Keeping score in a variable and displaying it</span><a class="headerlink" href="#code-displaying-text" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -365,8 +366,8 @@ same way.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="jeux_simples.html" class="btn btn-neutral float-left" title="5. Jeux d’arcade simples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="more_games.html" class="btn btn-neutral float-right" title="7. More advanced games" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="boink.html" class="btn btn-neutral float-left" title="6. Boink!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="more_games.html" class="btn btn-neutral float-right" title="8. More advanced games" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

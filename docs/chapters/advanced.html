@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12. Advanced topics &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>13. Advanced topics &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -16,8 +16,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="13. Python in Minecraft" href="minecraft.html" />
-    <link rel="prev" title="11. Tutorial: Race game" href="race.html" /> 
+    <link rel="next" title="14. Python in Minecraft" href="minecraft.html" />
+    <link rel="prev" title="12. Tutorial: Race game" href="race.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,21 +51,22 @@
 <li class="toctree-l1"><a class="reference internal" href="devinettes_texte.html">3. Jeux de devinettes basés sur du texte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphiques.html">4. Afficher des graphiques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jeux_simples.html">5. Jeux d’arcade simples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">6. Improving your games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">8. Tutorial: Chase game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maze.html">9. Tutorial: Maze game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shooter.html">10. Tutorial: Shooting game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="race.html">11. Tutorial: Race game</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Advanced topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#instructor-note">12.1. Instructor note</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#classes">12.2. Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#methods">12.3. Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#joystick-tester">12.4. Joystick tester</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#distributing-your-pygame-zero-games">12.5. Distributing your Pygame Zero games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boink.html">6. Boink!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">7. Improving your games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">8. More advanced games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">9. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maze.html">10. Tutorial: Maze game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shooter.html">11. Tutorial: Shooting game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="race.html">12. Tutorial: Race game</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Advanced topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instructor-note">13.1. Instructor note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">13.2. Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#methods">13.3. Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#joystick-tester">13.4. Joystick tester</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distributing-your-pygame-zero-games">13.5. Distributing your Pygame Zero games</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="minecraft.html">13. Python in Minecraft</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minecraft.html">14. Python in Minecraft</a></li>
 </ul>
 
         </div>
@@ -82,7 +83,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">12. </span>Advanced topics</li>
+      <li><span class="section-number">13. </span>Advanced topics</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/advanced.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,24 +94,24 @@
            <div itemprop="articleBody">
              
   <section id="advanced-topics">
-<h1><span class="section-number">12. </span>Advanced topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">13. </span>Advanced topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline"></a></h1>
 <section id="instructor-note">
-<h2><span class="section-number">12.1. </span>Instructor note<a class="headerlink" href="#instructor-note" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">13.1. </span>Instructor note<a class="headerlink" href="#instructor-note" title="Permalink to this headline"></a></h2>
 <p>This introduces object oriented
 programming, but I wouldn’t attempt this with young students since it
 requires abstract thinking.</p>
 </section>
 <section id="classes">
-<h2><span class="section-number">12.2. </span>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">13.2. </span>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
 <p>You’ve already been using class types provided by Pygame Zero, e.g. Rect
 and Actor. But if we want to store velocity as in
-<a class="reference internal" href="more_games.html#code-simple-physics"><span class="std std-numref">Program 7.3</span></a> we find these classes do
+<a class="reference internal" href="more_games.html#code-simple-physics"><span class="std std-numref">Program 8.3</span></a> we find these classes do
 not include <em>vx</em> and <em>vy</em> variables inside them by default. We have to
 remember to add a <em>vx</em> and <em>vy</em> every time we create an Actor.</p>
 <p>So let’s create our own class, called <em>Sprite</em>, that is the same as
 Actor but with these variables included.</p>
 <div class="literal-block-wrapper docutils container" id="code-classes">
-<div class="code-block-caption"><span class="caption-number">Program 12.1 </span><span class="caption-text">Classes</span><a class="headerlink" href="#code-classes" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 13.1 </span><span class="caption-text">Classes</span><a class="headerlink" href="#code-classes" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -157,11 +158,11 @@ Actor but with these variables included.</p>
 </div>
 </section>
 <section id="methods">
-<h2><span class="section-number">12.3. </span>Methods<a class="headerlink" href="#methods" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">13.3. </span>Methods<a class="headerlink" href="#methods" title="Permalink to this headline"></a></h2>
 <p>Classes can contain functions (called <em>methods</em>) as well as variables.
 Methods are the best place to modify the class’s variables.</p>
 <div class="literal-block-wrapper docutils container" id="code-classes2">
-<div class="code-block-caption"><span class="caption-number">Program 12.2 </span><span class="caption-text">Class methods</span><a class="headerlink" href="#code-classes2" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 13.2 </span><span class="caption-text">Class methods</span><a class="headerlink" href="#code-classes2" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -212,12 +213,12 @@ Methods are the best place to modify the class’s variables.</p>
 </div>
 </section>
 <section id="joystick-tester">
-<h2><span class="section-number">12.4. </span>Joystick tester<a class="headerlink" href="#joystick-tester" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">13.4. </span>Joystick tester<a class="headerlink" href="#joystick-tester" title="Permalink to this headline"></a></h2>
 <p>This program demonstrates using joysticks and for loops, but is mainly
 included to help you test the input from your controllers.</p>
 <p>(I don’t suggest typing this one yourself.)</p>
 <div class="literal-block-wrapper docutils container" id="code-joystick-tester">
-<div class="code-block-caption"><span class="caption-number">Program 12.3 </span><span class="caption-text">Joystick tester</span><a class="headerlink" href="#code-joystick-tester" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 13.3 </span><span class="caption-text">Joystick tester</span><a class="headerlink" href="#code-joystick-tester" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -286,7 +287,7 @@ included to help you test the input from your controllers.</p>
 </div>
 </section>
 <section id="distributing-your-pygame-zero-games">
-<h2><span class="section-number">12.5. </span>Distributing your Pygame Zero games<a class="headerlink" href="#distributing-your-pygame-zero-games" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">13.5. </span>Distributing your Pygame Zero games<a class="headerlink" href="#distributing-your-pygame-zero-games" title="Permalink to this headline"></a></h2>
 <p>This is often tricky to get working, but you can distribute your games
 to people who don’t have Python or Mu installed. You can put them on a
 USB stick, or a website for people to download, or even on itch.io for
@@ -337,8 +338,8 @@ copy this file.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="race.html" class="btn btn-neutral float-left" title="11. Tutorial: Race game" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="minecraft.html" class="btn btn-neutral float-right" title="13. Python in Minecraft" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="race.html" class="btn btn-neutral float-left" title="12. Tutorial: Race game" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="minecraft.html" class="btn btn-neutral float-right" title="14. Python in Minecraft" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Boink! &mdash; Coding Games With Pygame Zero &amp; Python  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Improving your games" href="more_graphics.html" />
+    <link rel="prev" title="5. Jeux d’arcade simples" href="jeux_simples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Coding Games With Pygame Zero & Python
+          </a>
+              <div class="version">
+                2.1.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Programmer des jeux vidéos avec Pygame Zero et Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#generer-le-livre">Générer le livre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#troisieme-edition">Troisième édition?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pr%C3%A9face.html">Préface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Table des matières:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="vue_ensemble.html">1. Aperçu du langage Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principes_fondamentaux.html">2. Les fondements du langage Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devinettes_texte.html">3. Jeux de devinettes basés sur du texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphiques.html">4. Afficher des graphiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jeux_simples.html">5. Jeux d’arcade simples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Boink!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#initializer-pygame-zero">6.1. Initializer Pygame Zero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#afficher-les-elements-du-jeu-a-l-ecran">6.2. Afficher les éléments du jeu à l’écran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mettre-a-jour-les-elements-du-jeu">6.3. Mettre à jour les éléments du jeu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saisie-du-clavier">6.4. Saisie du clavier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ajouter-un-adversaire">6.5. Ajouter un adversaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#regles-du-jeu">6.6. Règles du jeu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#regler-une-bogue">6.7. Régler une bogue</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">7. Improving your games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">8. More advanced games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pourchasser.html">9. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maze.html">10. Tutorial: Maze game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shooter.html">11. Tutorial: Shooting game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="race.html">12. Tutorial: Race game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">13. Advanced topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minecraft.html">14. Python in Minecraft</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Coding Games With Pygame Zero & Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">6. </span>Boink!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapters/boink.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boink">
+<h1><span class="section-number">6. </span>Boink!<a class="headerlink" href="#boink" title="Permalink to this headline"></a></h1>
+<p>Mettons en pratique ce que nous avons appris jusqu’à présent en créant un jeu classique. Nous allons programmer le jeu Boink! qui s’inspire fortement du jeu d’Atari intitulé Pong. Ce jeu est très simple. Il y a deux palettes qui sont aux deux extrémités de l’écran et une balle qui débute au centre de l’écran. L’objectif du jeu est d’utiliser une palette pour faire rebondir la balle dans le but de l’adversaire et, ainsi, gagner des points.</p>
+<div class="literal-block-wrapper docutils container" id="code-collisions">
+<div class="code-block-caption"><span class="caption-number">Program 6.1 </span><span class="caption-text">Collisions</span><a class="headerlink" href="#code-collisions" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="n">alien</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
+<span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">box</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+        <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">box</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hit&quot;</span><span class="p">)</span>
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="topic">
+<p class="topic-title">Exercice</p>
+<p>Ajoutez du mouvement vertical (comme vous avez fait dans l’exercice <a class="reference internal" href="graphiques.html#code-keyboard-input"><span class="std std-numref">Program 4.5</span></a>).</p>
+</div>
+<div class="topic">
+<p class="topic-title">Pour les plus avancés</p>
+<p>Créez une boite qui pourchasse l’extraterrestre.</p>
+</div>
+<section id="initializer-pygame-zero">
+<h2><span class="section-number">6.1. </span>Initializer Pygame Zero<a class="headerlink" href="#initializer-pygame-zero" title="Permalink to this headline"></a></h2>
+<p>Cette étape est seulement nécessaire si vous n’utilisez pas l’éditeur Thonny. Pour que votre code fonctionne, vous devez y ajouter une ligne d’importation au début et une fonction à la fin.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+
+<span class="c1"># insérez votre code de jeux entre ces deux lignes</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="afficher-les-elements-du-jeu-a-l-ecran">
+<h2><span class="section-number">6.2. </span>Afficher les éléments du jeu à l’écran<a class="headerlink" href="#afficher-les-elements-du-jeu-a-l-ecran" title="Permalink to this headline"></a></h2>
+<p>Afin d’avoir une fenêtre de jeu, nous devons assigner des valeurs aux variables <code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code>. De plus, nous allons donner un titre à notre fenêtre par le biais de la variable <code class="docutils literal notranslate"><span class="pre">TITLE</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span> <span class="c1"># Ne sera plus affiché dans les prochains exemples</span>
+
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s2">&quot;Boink!&quot;</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span> <span class="c1"># Ne sera plus affiché dans les prochains exemples</span>
+</pre></div>
+</div>
+<p>Pour Boink!, nous allons seulement utiliser des <code class="docutils literal notranslate"><span class="pre">Rect</span></code> pour créer les éléments du jeu. Les Rect sont comme les éléments fondamentaux des sprites acteurs. Ils servent à encadrer les images des acteurs sur l’écran et, surtout, de gérer les colisions qu’il peut y avoir entre les acteurs.</p>
+<p>Pour créer un Rect, nous avons besoin de deux points: le point en haut à gauche du rectangle et le point en bas à droite du rectangle. Ici, nous prenons la moitié des dimensions de l’écran et soustrayons la grandeur désirée du rectangle pour les premiers points. Pour les deuxièmes points, nous spécifions où ils vont se situer en fonction du premier point. Si nous prenons l’exemple de la balle, son deuxième point sera 20 unités en x et y du premier point.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s2">&quot;Boink!&quot;</span>
+
+<span class="n">balle</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">joueur</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="n">WIDTH</span> <span class="o">-</span> <span class="mi">20</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">adversaire</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Affichons maintenant quelque chose à l’écran pour avoir une idée du jeu. Pour ce faire, nous devons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code>. Cette fonction affiche à la surface d’affichage (le display surface en anglais). Cette surface est créée et gérée pour nous au travers de Pygame Zero. Pourtant, lorsqu’il est question des rectangles et de certaines autres formes géométriques, il est tout de même nécessaire de spécifier qu’on veut afficher à cette surface. Pour ce faire, nous utilisons les méthodes ou les fonctions de l’objet <code class="docutils literal notranslate"><span class="pre">screen</span></code> (écran en français).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+ <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+ <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">balle</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+ <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">joueur</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+ <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">adversaire</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+ <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">((</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Souvenez-vous qu’il est important de mettre ces fonctions dans un ordre qui ne fera pas cacher des éléments du jeu. C’est pourquoi nous avons débuté avec screen.fill() qui agit comme notre arrière-plan. Cette fonction prend trois arguments en tuple (dans une autre parenthèse). Ils représentent le montant de rouge, de vert et de bleu de la couleur que nous voulons afficher. La valeur minimale de ces arguments est de 0, ce qui représente l’absence d’une de ces couleurs, et la valeur maximale est de 255, ce qui représente la présence complète d’une de ces couleurs. Les prochaines fonctions, screen.draw.filled_rect(), servent à afficher des rectangles remplis à l’écran. Ces fonctions prennent comme argument un Rect (ceux que nous avons déjà créés) et une couleur dans un Tuple. La dernière fonction que nous appelons est la fonction screen.draw.line() qui nous permet d’afficher une ligne au milieu de l’écran. Cette fonction prend en argument les deux points de la ligne ainsi que la couleur du trait.</p>
+<p>Avec ces lignes de code, nous avons un programme qui affiche les éléments de base de notre jeu. Il ne reste qu’à rendre notre programme interactif.</p>
+</section>
+<section id="mettre-a-jour-les-elements-du-jeu">
+<h2><span class="section-number">6.3. </span>Mettre à jour les éléments du jeu<a class="headerlink" href="#mettre-a-jour-les-elements-du-jeu" title="Permalink to this headline"></a></h2>
+<p>Par où commencer lorsque nous voulons ajouter des éléments qui se déplacent dans notre jeu? Une bonne façon de répondre à ce genre de question est de réduire le problème en plus petits problèmes. Commençons par la balle de notre jeu.</p>
+<p>Comme pour les autres projets de ce livre, nous devons mettre les éléments interactifs du programme dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code>. Il serait donc utile de créer cette fonction et d’y ajouter les fonctionnalités de base de notre balle. La balle doit pouvoir rebondir des côtés de l’écran et des palettes de jeu. Si vous essayez de changer directement les valeurs de x ou y (la position), vous allez remarquer qu’il sera très difficile d’accomplir l’effet désiré. Nous devons donc créer deux nouvelles variables qui représentent le déplacement ou la vitesse en x et en y de la balle. Ainsi, si la balle entre en contact avec les marges de l’écran ou avec un autre élément du jeu, il sera possible, avec ces nouvelles variables, de renverser la valeur de la position de la balle pour créer l’effet de rebond. Ajoutons donc ces variables en dessous de la création de nos rectangles.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">balle</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">joueur</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="n">WIDTH</span> <span class="o">-</span> <span class="mi">20</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">adversaire</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+
+<span class="c1"># Variables du jeu</span>
+<span class="n">balle_dx</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">balle_dy</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>Nous nommons ces variables avec le suffixe dx et dy afin de rendre plus évident que ces variables gèrent le déplacement de la balle sur l’axe des x et sur l’axe des y. Une fois ces variables créées, nous pouvons les utiliser dans la fonction update() pour gérer le mouvement de la balle. Il suffit d’ajouter la valeur des variables dx et dy à la position de la balle.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ce code ne fonctionne pas</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+</pre></div>
+</div>
+<p>Comme souligner dans le commentaire, ce code nous donne une erreur. La raison de cette erreur est que nous assignons de nouvelles valeurs à balle_dx et à balle_dy dans update() et Python ne comprend pas que ces variables existent déjà (même si nous avons défini nos variables à l’extérieur des fonctions). Ceci est dû au fait que les variables définies dans les fonctions sont spécifiques à ces fonctions. Il faut dire à Python qu’on parle des variables globales qui sont à l’extérieur des fonctions. En somme, Python croit que ces variables sont spécifiques à la fonction update() et ne comprend pas pourquoi nous n’avons pas initialisé ces variables en écrivant balle_dx = 5 et balle_dy = 5. Pour indiquer à Python qu’on veut utiliser les variables qui sont à l’extérieur des fonctions, il faut ajouter le terme <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ce code fonctionne</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="k">global</span> <span class="n">balle_dx</span><span class="p">,</span> <span class="n">balle_dy</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+</pre></div>
+</div>
+<p>Avec ce code, notre balle se déplace. Toutefois, elle ne rebondit pas. Il nous faut donc vérifier lorsque la balle fait une collision avec les marges de l’écran avec des fonctions if. Nous pouvons utiliser les valeurs top, bottom, left et right du rectangle de la balle pour faire la comparaison avec la grandeur (WIDTH) et la hauteur de l’écran (HEIGHT). Lorsqu’il y a collision, il nous suffit d’inverser la variable dx ou dy afin de faire le rebond. Ceci est fait en multipliant la valeur de ces variables par -1.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="k">global</span> <span class="n">balle_dx</span><span class="p">,</span> <span class="n">balle_dy</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">balle_dy</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># équivalent à balle_dy = balle_dy * -1</span>
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="n">WIDTH</span><span class="p">:</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Nous allons ajouter une dernière vérification afin de savoir si la balle fait une collision avec le joueur ou l’adversaire. Pygame Zero nous facilite un peu le travail lorsqu’il est question de savoir si un Rect entre en collision avec un autre Rect. En effet, on peut utiliser la méthode (une fonction d’un objet) colliderect() afin de savoir s’il y a collision entre deux Rect.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="k">global</span> <span class="n">balle_dx</span><span class="p">,</span> <span class="n">balle_dy</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">balle_dy</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># équivalent à balle_dy = balle_dy * -1</span>
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="n">WIDTH</span><span class="p">:</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">joueur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">adversaire</span><span class="p">):</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Si vous lancez le programme, vous allez voir une balle qui rebondit partout. Félicitation, vous avez réussi à résoudre un des petits problèmes de notre code.</p>
+<p>Maintenant, si on regarde notre fonction update(), on y voit beaucoup de code qui est spécifique à la gestion de notre balle. Notre code est fonctionnel, mais peu structuré. La structure est importante en programmation pour faciliter la compréhension de votre code à d’autres programeurs. Elle sert aussi à faciliter la gestion de votre programme. Pour organiser notre code, mettons tout le code de la balle dans sa propre fonction et appelons cette fonction dans update().</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mouvement_balle</span><span class="p">():</span>
+       <span class="k">global</span> <span class="n">balle_dx</span><span class="p">,</span> <span class="n">balle_dy</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">balle_dy</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># équivalent à balle_dy = balle_dy * -1</span>
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="n">WIDTH</span><span class="p">:</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">joueur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">adversaire</span><span class="p">):</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="saisie-du-clavier">
+<h2><span class="section-number">6.4. </span>Saisie du clavier<a class="headerlink" href="#saisie-du-clavier" title="Permalink to this headline"></a></h2>
+<p>Tout comme pour la fonction mouvement_balle(), mettons le code pour gérer le joueur dans sa propre fonction.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mouvement_joueur</span><span class="p">():</span>
+
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+       <span class="n">mouvement_joueur</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Afin de déplacer le joueur, nous pouvons utiliser les variables de déplacement déjà définies par Pygame Zero.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mouvement_joueur</span><span class="p">():</span>
+       <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">up</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">joueur_vitesse</span>
+       <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">down</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">joueur_vitesse</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+       <span class="n">mouvement_joueur</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>En utilisant <code class="docutils literal notranslate"><span class="pre">keyboard</span></code>, on peut saisir la touche du clavier qui a été appuyé par l’utilisateur du programme. Lorsque la touche haut est appuyée (la flèche du haut sur le clavier), nous déplaçons le joueur vers le haut de l’écran en fonction de sa vitesse grâce à <code class="docutils literal notranslate"><span class="pre">joueur.y</span> <span class="pre">-=</span> <span class="pre">joueur_vitesse</span></code>. On fait de même pour la touche bas avec <code class="docutils literal notranslate"><span class="pre">joueur.y</span> <span class="pre">+=</span> <span class="pre">joueur_vitesse</span></code>. Nous ne devons pas utiliser le mot-clé <code class="docutils literal notranslate"><span class="pre">global</span></code> puisque nous n’assignons pas une  nouvelle valeur à joueur_vitesse. Python détecte automatiquement qu’on veut utiliser la valeur globale.</p>
+<p>Nous avons un nouveau problème. Le joueur peut quitter l’écran. Pour le limiter à l’espace de jeu, nous pouvons utiliser la même technique que nous avons utilisée avec la balle.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mouvement_joueur</span><span class="p">():</span>
+       <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">up</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">joueur_vitesse</span>
+       <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">down</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">joueur_vitesse</span>
+
+       <span class="k">if</span> <span class="n">joueur</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+       <span class="k">if</span> <span class="n">joueur</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">bottom</span> <span class="o">=</span> <span class="n">HEIGHT</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+       <span class="n">mouvement_joueur</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>En utilisant le Rect du joueur, nous pouvons faciliter la détection de la sortie de ce dernier grâce aux variables de l’objet <code class="docutils literal notranslate"><span class="pre">top</span></code> et <code class="docutils literal notranslate"><span class="pre">bottom</span></code>. Si nous dépassons les marges de l’écran, nous donnons la valeur de <code class="docutils literal notranslate"><span class="pre">0</span></code> (le haut de l’écran) ou de <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> (le bas de l’écran) à top (le haut du rectangle du joueur) ou bottom (le bas du rectangle du joueur) respectivement.</p>
+<p>Nous avons maintenant une balle qui rebondit et un joueur qui peut se déplacer. Ajoutons un adversaire.</p>
+</section>
+<section id="ajouter-un-adversaire">
+<h2><span class="section-number">6.5. </span>Ajouter un adversaire<a class="headerlink" href="#ajouter-un-adversaire" title="Permalink to this headline"></a></h2>
+<p>Créons d’abord la fonction pour gérer l’adversaire.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mouvement_adversaire</span><span class="p">():</span>
+
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+       <span class="n">mouvement_joueur</span><span class="p">()</span>
+       <span class="n">mouvement_adversaire</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Faisons en sorte que l’adversaire suit simplement la balle en fonction de sa vitesse.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mouvement_adversaire</span><span class="p">():</span>
+       <span class="k">if</span> <span class="n">adversaire</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;</span> <span class="n">balle</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
+            <span class="n">adversaire</span><span class="o">.</span><span class="n">top</span> <span class="o">+=</span> <span class="n">adversaire_vitesse</span>
+       <span class="k">if</span> <span class="n">adversaire</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;</span> <span class="n">balle</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
+            <span class="n">adversaire</span><span class="o">.</span><span class="n">bottom</span> <span class="o">-=</span> <span class="n">adversaire_vitesse</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+       <span class="n">mouvement_joueur</span><span class="p">()</span>
+       <span class="n">mouvement_adversaire</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Ce code, qui est très similaire au code pour maintenir les éléments du jeu dans l’espace de jeu, fait en sorte que l’adversaire suit la balle. Si on veut un adversaire plus difficile, on peut augmenter la valeur de la vitesse de l’adversaire. Inversement, si on veut un adversaire plus facile, on peut diminuer cette même valeur.</p>
+</section>
+<section id="regles-du-jeu">
+<h2><span class="section-number">6.6. </span>Règles du jeu<a class="headerlink" href="#regles-du-jeu" title="Permalink to this headline"></a></h2>
+<p>Pour simuler un but, nous pouvons simplement changer le code de la fonction mouvement_balle() pour que la balle se fasse replacer au centre de l’écran.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mouvement_balle</span><span class="p">():</span>
+       <span class="k">global</span> <span class="n">balle_dx</span><span class="p">,</span> <span class="n">balle_dy</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">balle_dy</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># équivalent à balle_dy = balle_dy * -1</span>
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="n">WIDTH</span><span class="p">:</span>
+            <span class="n">balle</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">joueur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">adversaire</span><span class="p">):</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Généralement, il est préférable de mettre ce genre de déplacement d’object dans sa propre fonction puisque souvent nous voulons ajouter d’autres étapes après le déplacement. Aussi, il est plus simple de retrouver cette règle du jeu si elle se trouve dans sa propre fonction.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">replacer_balle</span><span class="p">():</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">mouvement_balle</span><span class="p">():</span>
+       <span class="k">global</span> <span class="n">balle_dx</span><span class="p">,</span> <span class="n">balle_dy</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">balle_dy</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># équivalent à balle_dy = balle_dy * -1</span>
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="n">WIDTH</span><span class="p">:</span>
+            <span class="n">replacer_balle</span><span class="p">()</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">joueur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">adversaire</span><span class="p">):</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="regler-une-bogue">
+<h2><span class="section-number">6.7. </span>Régler une bogue<a class="headerlink" href="#regler-une-bogue" title="Permalink to this headline"></a></h2>
+<p>Si vous jouez assez longtemps, vous allez remarquer que votre balle peut rester prise dans une des raquettes du jeu. Ceci est causé par notre code qui, lorsque la balle entre en collision avec un autre élément du jeu, ne positionne pas la balle à sa position originale. On ne fait qu’inverser sa valeur de vitesse en x. Ainsi, si la position de la balle est déjà à l’intérieur d’une des raquettes, la balle restera prise. Pour corriger ceci, nous devons replacer la balle à une position à l’extérieur des raquettes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">replacer_balle</span><span class="p">():</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">mouvement_balle</span><span class="p">():</span>
+       <span class="k">global</span> <span class="n">balle_dx</span><span class="p">,</span> <span class="n">balle_dy</span>
+
+       <span class="n">ancien_x</span> <span class="o">=</span> <span class="n">balle</span><span class="o">.</span><span class="n">x</span>
+
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">balle_dy</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># équivalent à balle_dy = balle_dy * -1</span>
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="n">WIDTH</span><span class="p">:</span>
+            <span class="n">replacer_balle</span><span class="p">()</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">joueur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">adversaire</span><span class="p">):</span>
+            <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">ancien_x</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>En nous souvenant de notre ancienne position avec la variable <code class="docutils literal notranslate"><span class="pre">ancien_x</span></code> et en utilisant cette variable pour remettre la position du Rect de la balle lorsqu’on entre en collision avec le joueur ou l’adversaire, nous réglons notre bogue.</p>
+<p>Avec cette modification, nous avons un jeu qui est techniquement complet. Toutefois, il y a de nombreuses améliorations qu’on pourrait faire. Selon vous, quelles améliorations pourrait-on faire pour améliorer notre programme?</p>
+<p>Voici le code complet du jeu jusqu’à présent:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s2">&quot;Boink!&quot;</span>
+
+<span class="n">balle</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">joueur</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="n">WIDTH</span> <span class="o">-</span> <span class="mi">20</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">adversaire</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+
+<span class="n">balle_dx</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">balle_dy</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">joueur_vitesse</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">adversaire_vitesse</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="k">def</span> <span class="nf">replacer_balle</span><span class="p">():</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">mouvement_balle</span><span class="p">():</span>
+       <span class="k">global</span> <span class="n">balle_dx</span><span class="p">,</span> <span class="n">balle_dy</span>
+
+       <span class="n">ancien_x</span> <span class="o">=</span> <span class="n">balle</span><span class="o">.</span><span class="n">x</span>
+
+       <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">balle_dx</span>
+       <span class="n">balle</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">balle_dy</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">balle_dy</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="n">WIDTH</span><span class="p">:</span>
+            <span class="n">replacer_balle</span><span class="p">()</span>
+
+       <span class="k">if</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">joueur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">balle</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">adversaire</span><span class="p">):</span>
+            <span class="n">balle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">ancien_x</span>
+            <span class="n">balle_dx</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">mouvement_joueur</span><span class="p">():</span>
+       <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">up</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">joueur_vitesse</span>
+       <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">down</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">joueur_vitesse</span>
+
+       <span class="k">if</span> <span class="n">joueur</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">top</span> <span class="o">=</span> <span class="mi">0</span>
+       <span class="k">if</span> <span class="n">joueur</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="n">HEIGHT</span><span class="p">:</span>
+            <span class="n">joueur</span><span class="o">.</span><span class="n">bottom</span> <span class="o">=</span> <span class="n">HEIGHT</span>
+
+<span class="k">def</span> <span class="nf">mouvement_adversaire</span><span class="p">():</span>
+       <span class="k">if</span> <span class="n">adversaire</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;</span> <span class="n">balle</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
+            <span class="n">adversaire</span><span class="o">.</span><span class="n">top</span> <span class="o">+=</span> <span class="n">adversaire_vitesse</span>
+       <span class="k">if</span> <span class="n">adversaire</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;</span> <span class="n">balle</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
+            <span class="n">adversaire</span><span class="o">.</span><span class="n">bottom</span> <span class="o">-=</span> <span class="n">adversaire_vitesse</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+       <span class="n">mouvement_balle</span><span class="p">()</span>
+       <span class="n">mouvement_joueur</span><span class="p">()</span>
+       <span class="n">mouvement_adversaire</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+      <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+      <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">balle</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+      <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">joueur</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+      <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">adversaire</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+      <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">((</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="n">WIDTH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="topic">
+<p class="topic-title">Pour les plus avancés</p>
+<p>Ajoutez un pointage au milieu de l’espace de jeu et faites en sorte qu’après un certain nombre de points, la partie se termine.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Pour les plus avancés</p>
+<p>Ajoutez un chronomètre au début du jeu de 3 secondes afin de donner du temps au joueur pour se préparer à la prochaine manche.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Pour les plus avancés</p>
+<p>Ajoutez des images pour représenter la balle et les palettes.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Pour les plus avancés</p>
+<p>Ajoutez des sons et de la musique au jeu.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="jeux_simples.html" class="btn btn-neutral float-left" title="5. Jeux d’arcade simples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="more_graphics.html" class="btn btn-neutral float-right" title="7. Improving your games" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Richard Smith.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
