@@ -39,6 +39,7 @@ Regardez https://github.com/electronstudio/python_book pour des mises à jour su
    chapters/devinettes_texte
    chapters/graphiques
    chapters/jeux_simples
+   chapters/boink
    chapters/more_graphics
    chapters/more_games
    chapters/pourchasser
